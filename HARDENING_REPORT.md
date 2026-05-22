@@ -32,6 +32,7 @@ Date: 2026-05-22
    - Added availability, state, health, BME280, and command topics.
    - Added command validation and rejection reason tracking.
    - Clears retained command topics before subscribing after connect.
+   - Verified component availability topics match Discovery payload expectations.
 
 6. Test/QA audit
    - Native tests cover LG parser/checksum/mapping, MQTT command validation, thermistor/digipot conversion, BME stale logic, settings validation, and watchdog quorum.
@@ -40,6 +41,7 @@ Date: 2026-05-22
 7. Documentation/provenance audit
    - Added `docs/reference/` with upstream protocol/library documentation, source licenses, hardware datasheets, Home Assistant MQTT pages, and platform API references.
    - Recorded upstream repository commits and download sources in `docs/reference/README.md`.
+   - Expanded README, changelog, Doxygen main page, public API comments, hardware bring-up checklist, and digipot calibration field documentation.
 
 ## Findings And Fixes
 
@@ -47,13 +49,15 @@ Date: 2026-05-22
 | --- | --- | --- |
 | Fixed 13-byte protocol parsing can desynchronize after boot noise. | High | Implemented sliding-window parser with checksum/source validation. |
 | Virtual thermistor constants were not reachable with 5 kOhm digipot defaults. | High | Changed defaults to reachable 5 kOhm placeholder values and documented mandatory calibration. |
-| Raw digipot writes could be dangerous if exposed directly. | High | CLI/MQTT raw wiper writes require a one-shot arming state. |
+| Raw digipot writes could be dangerous if exposed directly. | High | Raw wiper writes require a one-shot local CLI arming state; MQTT wiper commands are ignored unless that local arm is active. |
 | Stale BME280 data could drive false room temperature. | High | Added freshness tracking, hold-last-good timeout, and safe fixed fallback. |
 | Logging/CLI could block hot paths. | Medium | CLI drains a bounded byte budget per loop and avoids long blocking waits. |
 | MQTT retained command payloads could replay after reboot. | Medium | Firmware publishes empty retained payloads to command topics before subscribing. |
 | Settings writes could wear flash. | Medium | Added delayed/coalesced NVS save path. |
 | USB CDC Serial macro was wrong for native USB mode. | Medium | Set `ARDUINO_USB_MODE=0` with `ARDUINO_USB_CDC_ON_BOOT=1`. |
 | StatusLED legacy RMT backend produced deprecated driver warning. | Low | Switched build flag to `STATUSLED_BACKEND_IDF5_WS2812=1`. |
+| Home Assistant Discovery referenced component availability topics that were not published. | Medium | Added retained `availability/lg_bus` and `availability/bme280` state publishing. |
+| CLI/help and documentation could imply a completed digipot calibration workflow. | Low | Documented `digipot calibrate` as guidance-only and clarified current configuration support. |
 
 ## Remaining Hardware-Verification Items
 
@@ -88,4 +92,7 @@ pio run
 SUCCESS
 RAM: 20.4%
 Flash: 77.8%
+
+doxygen Doxyfile
+SUCCESS
 ```

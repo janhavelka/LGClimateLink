@@ -1,15 +1,25 @@
 #pragma once
 
+/**
+ * @file LgTypes.h
+ * @brief Shared LG protocol and climate-state data types.
+ */
+
 #include <array>
 #include <stdint.h>
 
 namespace lgcl::lg {
 
+/// Number of bytes in the modern LG wired-controller frame.
 static constexpr uint8_t kFrameLength = 13;
+
+/// Parser reset interval for very slow or interrupted byte streams.
 static constexpr uint32_t kInterByteTimeoutMs = 15000;
 
+/// Raw LG frame bytes including checksum.
 using FrameBytes = std::array<uint8_t, kFrameLength>;
 
+/// Low three-bit LG message type from the frame header.
 enum class FrameType : uint8_t {
   Status = 0,
   Capabilities = 1,
@@ -21,6 +31,7 @@ enum class FrameType : uint8_t {
   TypeFPower = 7,
 };
 
+/// Logical sender decoded from the LG frame header.
 enum class Sender : uint8_t {
   Unknown = 0,
   Unit,
@@ -28,6 +39,7 @@ enum class Sender : uint8_t {
   SlaveController,
 };
 
+/// HVAC operating mode exposed to CLI, MQTT, and Home Assistant.
 enum class HvacMode : uint8_t {
   Off = 0,
   Auto,
@@ -37,6 +49,7 @@ enum class HvacMode : uint8_t {
   FanOnly,
 };
 
+/// Fan-speed mode from the LG protocol model.
 enum class FanMode : uint8_t {
   Low = 0,
   Medium,
@@ -48,6 +61,7 @@ enum class FanMode : uint8_t {
   Power,
 };
 
+/// Simplified vane/swing mode exposed by the controller.
 enum class SwingMode : uint8_t {
   Off = 0,
   Vertical,
@@ -55,18 +69,21 @@ enum class SwingMode : uint8_t {
   Both,
 };
 
+/// LG installer thermistor source setting.
 enum class ThermistorMode : uint8_t {
   Unit = 0,
   Controller = 1,
   TwoThermistor = 2,
 };
 
+/// Parsed and classified LG frame.
 struct LgFrame {
   FrameBytes bytes = {};
   FrameType type = FrameType::Status;
   Sender sender = Sender::Unknown;
 };
 
+/// Feature flags learned from LG capability frames.
 struct LgCapabilities {
   bool known = false;
   bool heat = true;
@@ -92,6 +109,12 @@ struct LgCapabilities {
   bool halfDegrees = true;
 };
 
+/**
+ * @brief Latest observed LG unit state.
+ *
+ * This state is derived from accepted bus frames and local room-temperature
+ * updates. It is the source for CLI status and MQTT state publishing.
+ */
 struct ClimateState {
   bool online = false;
   uint32_t lastFrameMs = 0;
@@ -119,6 +142,7 @@ struct ClimateState {
   LgCapabilities capabilities;
 };
 
+/// Desired controller state that is serialized into outbound LG frames.
 struct DesiredClimate {
   HvacMode mode = HvacMode::Off;
   FanMode fan = FanMode::Auto;
@@ -130,6 +154,7 @@ struct DesiredClimate {
   uint16_t sleepTimerMinutes = 0;
 };
 
+/// Result used by protocol helpers that can reject unsupported input.
 struct ProtocolError {
   bool ok = true;
   const char* message = "OK";

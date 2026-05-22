@@ -447,7 +447,7 @@ void App::printHelp(Print& out) const {
   out.println("  wifi status|config <ssid> <password>|clear");
   out.println("  mqtt status|config <host> <port> [user] [password]|clear");
   out.println("  lg status|trace <on|off>|send arm|send <13 hex bytes>|test");
-  out.println("  bme status|read|config");
+  out.println("  bme status|read");
   out.println("  digipot status|set arm|set code <0..255>|test|calibrate");
   out.println("  ntc calc <temp_c>");
   out.println("  led status|test <r> <g> <b>");

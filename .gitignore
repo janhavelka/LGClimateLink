@@ -17,6 +17,7 @@
 coverage/
 build/
 dist/
+docs/doxygen/
 
 # OS/editor noise
 Thumbs.db

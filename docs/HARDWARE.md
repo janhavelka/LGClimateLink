@@ -79,6 +79,31 @@ rheostat B-W topology
 
 The firmware supports A-W/B-W topology, code inversion, series resistance, and clamped min/max resistance. Actual production constants require hardware measurements.
 
+## Electrical Bring-Up Checklist
+
+Record these measurements before connecting the controller to an HVAC unit.
+
+| Check | Expected result | Measured result | Pass |
+| --- | --- | --- | --- |
+| Board supply current at idle | Stable and within power budget. | TBD | TBD |
+| ESP32-S2 3.3 V rail | Within regulator tolerance during Wi-Fi TX and LED updates. | TBD | TBD |
+| I2C pull-up voltage | Matches BME280 and MCP45HVX1 logic limits. | TBD | TBD |
+| BME280 I2C address | 0x76 or 0x77 visible in `i2c scan`. | TBD | TBD |
+| MCP45HVX1 I2C address | 0x3C..0x3F visible in `i2c scan`. | TBD | TBD |
+| MCP45HVX1 high-voltage terminals | Terminal voltages stay inside datasheet limits for the selected supply rails. | TBD | TBD |
+| LG sensor-pin open-circuit voltage | Safe for MCP45HVX1 terminal ratings and board resistor network. | TBD | TBD |
+| LG sensor-pin current at min resistance | Safe for MCP45HVX1, series resistors, and LG input. | TBD | TBD |
+| Effective resistance at safe code | Matches firmware estimate within acceptable tolerance. | TBD | TBD |
+| Effective resistance at min/max allowed code | Never leaves the allowed LG sensor range. | TBD | TBD |
+| Resistance during MCU reset | Falls to a safe value or documented hardware failsafe state. | TBD | TBD |
+| Resistance during brownout/power loss | Falls to a safe value or documented hardware failsafe state. | TBD | TBD |
+| LIN recessive voltage | Matches LG bus and TLIN1027 expectations. | TBD | TBD |
+| LIN dominant voltage | Matches LG bus and TLIN1027 expectations. | TBD | TBD |
+| LIN ground reference | Controller ground reference is compatible with the LG wired-controller bus. | TBD | TBD |
+| 104 baud TX bit timing | Measured bit width matches protocol tolerance. | TBD | TBD |
+
+If any high-voltage terminal, LG sensor-pin, or reset-state measurement is unknown, do not leave the unit connected unattended.
+
 ## Open Hardware Items
 
 | Item | Risk | Required verification |

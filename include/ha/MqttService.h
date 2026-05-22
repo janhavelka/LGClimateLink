@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * @file MqttService.h
+ * @brief Wi-Fi, MQTT reconnect, Home Assistant Discovery, and state publishing.
+ */
+
 #include "config/RuntimeSettings.h"
 #include "ha/HaDiscovery.h"
 #include "health/HealthMonitor.h"
@@ -13,6 +18,7 @@
 
 namespace lgcl::ha {
 
+/// Runtime network and MQTT counters for diagnostics.
 struct MqttSnapshot {
   bool wifiConnected = false;
   bool mqttConnected = false;
@@ -25,12 +31,23 @@ struct MqttSnapshot {
   const char* lastError = "not initialized";
 };
 
+/**
+ * @brief Owns Wi-Fi/MQTT connectivity and Home Assistant communication.
+ *
+ * The service uses bounded reconnect attempts with backoff. It validates
+ * inbound commands through HaDiscovery helpers before exposing them to App.
+ */
 class MqttService {
  public:
+  /// Configure Wi-Fi/MQTT settings and reset reconnect state.
   bool begin(const config::RuntimeSettings& settings, uint32_t nowMs);
+  /// Run bounded reconnect and MQTT loop work.
   void tick(uint32_t nowMs);
+  /// Pop one validated command if available.
   bool popCommand(MqttCommand& out);
+  /// Publish retained Home Assistant MQTT Discovery payload.
   bool publishDiscovery();
+  /// Publish current climate, BME280, health, and availability state.
   bool publishState(const lg::ClimateState& climate,
                     const sensors::Bme280Snapshot& bme,
                     const health::HealthSnapshot& health,
@@ -38,6 +55,7 @@ class MqttService {
                     uint8_t digipotCode,
                     float digipotOhms,
                     bool force);
+  /// Return the latest network/MQTT snapshot.
   const MqttSnapshot& snapshot() const { return snapshot_; }
 
  private:

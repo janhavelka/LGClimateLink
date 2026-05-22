@@ -94,10 +94,14 @@ bool MqttService::publishState(const lg::ClimateState& climate,
   char tClimate[128];
   char tBme[128];
   char tHealth[128];
+  char tLgAvailability[128];
+  char tBmeAvailability[128];
   char payload[768];
   if (!topic(tClimate, sizeof(tClimate), "state/climate") ||
       !topic(tBme, sizeof(tBme), "state/bme280") ||
-      !topic(tHealth, sizeof(tHealth), "state/health")) {
+      !topic(tHealth, sizeof(tHealth), "state/health") ||
+      !topic(tLgAvailability, sizeof(tLgAvailability), "availability/lg_bus") ||
+      !topic(tBmeAvailability, sizeof(tBmeAvailability), "availability/bme280")) {
     return false;
   }
   if (buildClimateStatePayload(climate, uptimeSec, seq_, digipotCode, digipotOhms,
@@ -110,6 +114,12 @@ bool MqttService::publishState(const lg::ClimateState& climate,
   if (buildHealthStatePayload(health, snapshot_.wifiRssiDbm, uptimeSec, payload, sizeof(payload))) {
     (void)publishText(tHealth, payload, false);
   }
+  const health::HealthItem& lgHealth =
+      health.items[static_cast<uint8_t>(health::ComponentId::LgBus)];
+  const bool lgOnline = !lgHealth.fault && !lgHealth.degraded;
+  const bool bmeOnline = bme.initialized && !bme.stale;
+  (void)publishText(tLgAvailability, lgOnline ? "online" : "offline", true);
+  (void)publishText(tBmeAvailability, bmeOnline ? "online" : "offline", true);
   return true;
 }
 

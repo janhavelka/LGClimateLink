@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * @file App.h
+ * @brief Top-level Arduino application wiring for all firmware services.
+ */
+
 #ifdef ARDUINO
 
 #include <Arduino.h>
@@ -18,11 +23,20 @@
 
 namespace lgcl {
 
+/**
+ * @brief Owns service instances and implements Arduino setup/loop behavior.
+ *
+ * App is intentionally the only broad composition object. Lower-level services
+ * remain focused and testable where possible.
+ */
 class App final : public cli::ICliHandler {
  public:
   App();
+  /// Initialize hardware, load settings, start services, and print boot status.
   void begin();
+  /// Run one bounded iteration of all firmware services.
   void loop();
+  /// Handle one parsed CLI command.
   void handleCliCommand(const cli::CliCommand& command, Print& out) override;
 
  private:

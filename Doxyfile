@@ -1,8 +1,65 @@
+# Doxygen configuration for LGClimateLink.
+#
+# The generated output is a local developer artifact and is ignored by git.
+# Run:
+#   doxygen Doxyfile
+
 PROJECT_NAME           = "LGClimateLink"
+PROJECT_BRIEF          = "ESP32-S2 LG HVAC wired-controller firmware"
+PROJECT_NUMBER         = "0.1.0"
 OUTPUT_DIRECTORY       = docs/doxygen
-INPUT                  = include src
+
+INPUT                  = docs/DOXYGEN_MAIN.md \
+                         docs/PROTOCOL.md \
+                         docs/HARDWARE.md \
+                         docs/DIGIPOT_NTC_EMULATION.md \
+                         include
 RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.cpp *.md
+EXCLUDE                = docs/reference
+EXCLUDE_PATTERNS       = */.pio/* */docs/reference/*
+USE_MDFILE_AS_MAINPAGE = docs/DOXYGEN_MAIN.md
+
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO
-EXTRACT_ALL            = NO
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+TOC_INCLUDE_HEADINGS   = 3
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = NO
+MULTILINE_CPP_IS_BRIEF = NO
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = NO
+PREDEFINED             = ARDUINO
+SKIP_FUNCTION_MACROS   = YES
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = YES
+SORT_GROUP_NAMES       = YES
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = NO
+WARN_AS_ERROR          = NO
+
 QUIET                  = YES

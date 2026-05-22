@@ -1,6 +1,6 @@
 # Digipot NTC Emulation
 
-The MCP45HVX1 output is treated as a safety-critical virtual room sensor. The firmware does not allow MQTT or CLI to write arbitrary raw wiper values unless the user explicitly arms a one-shot manual command.
+The MCP45HVX1 output is treated as a safety-critical virtual room sensor. The firmware does not allow raw wiper writes unless the user explicitly arms a one-shot manual command from the local CLI. MQTT `cmd/digipot_wiper` is ignored unless that local arm is active.
 
 ## Conversion Path
 
@@ -62,6 +62,34 @@ safe resistance estimate: about 2565 ohm
 
 These constants are not claimed to be the original LG sensor. They are safe software placeholders until the real thermistor and board topology are verified.
 
+## Configurable Calibration Fields
+
+The conversion code supports a full calibration model, but the current CLI exposes only a small subset. Treat the remaining fields as firmware constants until a complete calibration command set is added.
+
+| Field | Struct field | Current CLI support | Notes |
+| --- | --- | --- | --- |
+| Safe resistance | `NtcCalibration::safeResistanceOhms` | `config set safe_ohms <ohms>` | Used for safe fixed fallback. |
+| BME280 I2C address | `RuntimeSettings::bmeAddress` | `config set bme_addr <address>` | Accepts decimal or C-style numeric parsing depending on CLI input. |
+| Thermistor model | `NtcCalibration::model` | Firmware constant | Beta, Steinhart-Hart, and table models are implemented in code. |
+| NTC/PTC polarity | `NtcCalibration::polarity` | Firmware constant | Default is NTC. |
+| Reference resistance | `NtcCalibration::rRefOhms` | Firmware constant | Default is 5000 ohm placeholder. |
+| Reference temperature | `NtcCalibration::tRefC` | Firmware constant | Default is 25 C. |
+| Beta coefficient | `NtcCalibration::betaK` | Firmware constant | Default is 3950 K placeholder. |
+| Steinhart-Hart coefficients | `shA`, `shB`, `shC` | Firmware constant | Used only when model is Steinhart-Hart. |
+| Temperature clamp | `minTemperatureC`, `maxTemperatureC` | Firmware constant | Rejects impossible room-temperature inputs. |
+| Resistance clamp | `minResistanceOhms`, `maxResistanceOhms` | Firmware constant | Prevents out-of-range target resistance. |
+| Hold-last-good interval | `holdLastGoodMs` | Firmware constant | Bounds stale-sensor operation. |
+| Calibration table | `table[]`, `tableCount` | Firmware constant | Table points must be monotonic. |
+| Digipot nominal resistance | `DigipotCalibration::nominalRabOhms` | Firmware constant | Default matches MCP45HV51-502E nominal RAB. |
+| Wiper limits | `minWiperCode`, `maxAllowedWiperCode` | Firmware constant | Avoids end-stop operation by default. |
+| Safe wiper code | `safeWiperCode` | Firmware constant | Written during boot and safe fallback. |
+| Series resistance | `seriesOhms` | Firmware constant | Must come from schematic and measurement. |
+| Wiper resistance estimate | `wiperOhms` | Firmware constant | Datasheet estimate; measure if possible. |
+| Code inversion | `invertCode` | Firmware constant | Use if board wiring reverses logical direction. |
+| Terminal topology | `topology` | Firmware constant | B-W default until hardware is verified. |
+
+When calibration is complete, update the firmware constants or extend the CLI/NVS schema so the measured values can be provisioned safely.
+
 ## Failure Behavior
 
 On boot:
@@ -95,7 +123,7 @@ Safe current behavior:
 
 - output is clamped
 - safe fixed wiper is written on boot/fault/stale sensor
-- raw wiper writes require CLI arming
+- raw wiper writes require local CLI arming
 
 Verification method:
 

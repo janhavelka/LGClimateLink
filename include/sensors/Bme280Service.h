@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * @file Bme280Service.h
+ * @brief BME280 polling service and Arduino driver adapter.
+ */
+
 #include <stdint.h>
 
 #ifdef ARDUINO
@@ -9,6 +14,7 @@
 
 namespace lgcl::sensors {
 
+/// One environmental sample with acquisition timestamp and validity flag.
 struct EnvSample {
   float temperatureC = 0.0f;
   float humidityPct = 0.0f;
@@ -17,6 +23,7 @@ struct EnvSample {
   bool valid = false;
 };
 
+/// Runtime health and measurement state for the BME280 service.
 struct Bme280Snapshot {
   EnvSample sample;
   uint32_t lastAttemptMs = 0;
@@ -29,6 +36,12 @@ struct Bme280Snapshot {
   const char* lastError = "not initialized";
 };
 
+/**
+ * @brief Minimal driver contract used by Bme280Service.
+ *
+ * Tests can provide fakes through this interface. The Arduino implementation
+ * adapts the required `janhavelka/BME280` library.
+ */
 class IBme280Driver {
  public:
   virtual ~IBme280Driver() = default;
@@ -41,15 +54,28 @@ class IBme280Driver {
   virtual bool recover() = 0;
 };
 
+/**
+ * @brief Nonblocking BME280 measurement scheduler.
+ *
+ * The service requests measurements periodically, validates plausibility, tracks
+ * freshness, and exposes a fresh-temperature helper for the virtual thermistor
+ * path.
+ */
 class Bme280Service {
  public:
   Bme280Service() = default;
 
+  /// Install the hardware driver. Must be called before begin().
   void setDriver(IBme280Driver* driver) { driver_ = driver; }
+  /// Start the service with address, poll interval, and stale deadline.
   bool begin(uint8_t address, uint32_t pollMs, uint32_t staleMs, uint32_t nowMs);
+  /// Run bounded polling work.
   void tick(uint32_t nowMs);
+  /// Return the latest snapshot after refreshing the stale flag.
   const Bme280Snapshot& snapshot(uint32_t nowMs);
+  /// Return true and fill outC only when the latest temperature is fresh.
   bool freshTemperature(float& outC, uint32_t nowMs);
+  /// Request an immediate measurement on the next tick.
   void forceRead(uint32_t nowMs);
 
  private:
@@ -67,6 +93,7 @@ class Bme280Service {
 };
 
 #ifdef ARDUINO
+/// Arduino adapter for `janhavelka/BME280` using an injected TwoWire bus.
 class Bme280ArduinoDriver final : public IBme280Driver {
  public:
   Bme280ArduinoDriver(TwoWire& wire, uint32_t timeoutMs) : wire_(wire), timeoutMs_(timeoutMs) {}
