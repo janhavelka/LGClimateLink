@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plsbl.benoitblanchon.fr/js/pa-Yb9KuXpMiZLGmBcvIudEM.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/style.css?1779382094">
+  <link rel="stylesheet" href="/node_modules/lite-youtube-embed/src/lite-yt-embed.css">
+  <link rel="icon" href="/favicon.ico" />
+  
+  
+  <link type="application/atom+xml" rel="alternate" href="https://arduinojson.org/feed.xml" title="ArduinoJson" />
+  
+  <title>Documentation
+ | ArduinoJson 7</title>
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Documentation" />
+<meta name="author" content="BenoitBlanchon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This section contains the official documentation of ArduinoJson. It links to the examples, the FAQ and the complete API reference." />
+<meta name="twitter:description" property="og:description" content="This section contains the official documentation of ArduinoJson. It links to the examples, the FAQ and the complete API reference." />
+<link rel="canonical" href="https://arduinojson.org/v7/" />
+<meta property="og:url" content="https://arduinojson.org/v7/" />
+<meta property="og:site_name" content="ArduinoJson" />
+<meta property="og:image" content="https://arduinojson.org/images/logo-1200.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://arduinojson.org/images/logo-1200.jpg" />
+<meta name="twitter:title" content="Documentation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"BenoitBlanchon"},"description":"This section contains the official documentation of ArduinoJson. It links to the examples, the FAQ and the complete API reference.","headline":"Documentation","image":"https://arduinojson.org/images/logo-1200.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arduinojson.org/images/logo-256.png"},"name":"BenoitBlanchon"},"url":"https://arduinojson.org/v7/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <meta name="keywords" content="ArduinoJson,manual,documentation">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Version 7",
+      "item": "https://arduinojson.org/v7/"
+    }
+  ]
+}
+</script>
+</head>
+<body data-variant="0" data-timestamp="1779382094" data-environment="production" data-no-js>
+<script>delete document.body.dataset.noJs</script>
+<div class="d-flex flex-column" style="min-height: 100vh">
+  <header>
+  
+  
+  
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarArduinoJson" aria-controls="navbarArduinoJson" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="ArduinoJson" src="/images/navlogo.svg" width="1256" height="203" style="height: 1.5em; width: auto">
+      </a>
+
+      
+      
+      
+
+      <div class="collapse navbar-collapse" id="navbarArduinoJson">
+        <ul class="navbar-nav me-auto">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              v7
+            </a>
+            
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              
+              <a class="dropdown-item" href="/v5/doc/">v5</a>
+              
+              
+              
+              <a class="dropdown-item" href="/v6/doc/">v6</a>
+              
+              
+              
+              <span class="dropdown-item disabled">v7</span>
+              
+              
+            </div>
+          </li>
+          <li id="nav-doc" class="nav-item active">
+            <a class="nav-link link-primary" href="/v7/">Documentation</a>
+          </li><li id="nav-assistant" class="nav-item">
+            <a class="nav-link" href="/v7/assistant/" aria-current="page">Assistant</a>
+          </li><li id="nav-troubleshooter" class="nav-item">
+            <a class="nav-link" href="/troubleshooter" aria-current="page">Troubleshooter</a>
+          </li><li id="nav-book" class="nav-item">
+            <a class="nav-link" href="/book/" aria-current="page">Book</a>
+          </li><li id="nav-news" class="nav-item">
+            <a class="nav-link" href="/news/" aria-current="page">News</a>
+          </li></ul>
+        <form class="me-sm-2" action="/v7/search/">
+          <input class="form-control" name="q" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main class="flex-grow-1">
+  <header class="page-header">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+  </nav>
+
+    <h1><p>Documentation</p>
+</h1>
+    
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-3 d-none d-lg-block">
+     
+     <ul class="nav nav-pills flex-column mb-auto sticky-top">
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/" class="nav-link text-truncate active">Documentation</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/tutorial/deserialization/" class="nav-link text-truncate ">Deserialization tutorial</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/tutorial/serialization/" class="nav-link text-truncate ">Serialization tutorial</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/example/" class="nav-link text-truncate ">Examples</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/api/" class="nav-link text-truncate ">API Reference</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/config/" class="nav-link text-truncate ">Compile time configuration</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/how-to/" class="nav-link text-truncate ">How To's</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/faq/" class="nav-link text-truncate ">FAQ</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/revisions/" class="nav-link text-truncate ">Release notes</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/known-issues/" class="nav-link text-truncate ">Known issues</a>
+  </li>
+  
+</ul>
+
+    </div>
+    <div class="col-9 article">
+      <h2 id="first-contact">First contact</h2>
+
+<dl>
+  <dt><a href="/v7/how-to/install-arduinojson/">Installation</a></dt>
+  <dd>How to install ArduinoJson on your computer.</dd>
+  <dt><a href="/v7/tutorial/deserialization/">Deserialization tutorial</a></dt>
+  <dd>Step-by-step guide on how to parse a JSON document using the library.</dd>
+  <dt><a href="/v7/tutorial/serialization/">Serialization tutorial</a></dt>
+  <dd>Step-by-step guide on how to generate a JSON document using the library.</dd>
+  <dt><a href="/v7/example/">Examples</a></dt>
+  <dd>Complete programs showing how to use ArduinoJson in various situations.</dd>
+</dl>
+
+<h2 id="everyday-use">Everyday use</h2>
+
+<dl>
+  <dt><a href="/v7/api/">API Reference</a></dt>
+  <dd>Detailed description of each function of the library.</dd>
+  <dt><a href="/v7/config/">Compile time configuration</a></dt>
+  <dd>Settings to configure the library</dd>
+  <dt><a href="/v7/how-to/">How To’s</a></dt>
+  <dd>Recipes and techniques to use ArduinoJson in your project.</dd>
+  <dt><a href="/v7/faq/">FAQ</a></dt>
+  <dd>The answers to the most frequent questions.</dd>
+  <dt><a href="/v7/revisions/">Release notes</a></dt>
+  <dd>See what changed between each version.</dd>
+  <dt><a href="/v7/known-issues/">Known issues</a></dt>
+  <dd>All the known issues and limitations of the current version.</dd>
+</dl>
+
+      <nav aria-label="breadcrumb" class="mt-4 bg-light px-3 py-2 rounded">
+  <ol class="breadcrumb m-0">
+    
+    <li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">
+      <span>Version 7
+      </span>
+    </li>
+  </ol>
+</nav>
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="site-footer hidden-sm-down text-light bg-dark py-3">
+  <div class="container">
+   	<div class="row">
+   		<div class="col-md-6 col-lg-4 my-2">
+        <h5>ArduinoJson</h5>
+        <div>A JSON library for embedded C++.</div>
+        <div>Simple, efficient, and versatile.</div>
+        <div class="text-muted">Copyright 2014-2026 &copy; Benoît Blanchon</div>
+      </div>
+      <div class="col-md-6 col-lg-4 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/sponsors/bblanchon"><svg viewBox="0 0 512 512" class="icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" fill="currentColor"/></svg> Sponsors</a>
+        </nav>
+        <div class="d-flex gap-2">
+          
+          <a href="https://github.com/1technophile" target="_blank"><img class="avatar avatar-small" alt="1technophile" width="40" height="40" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/1technophile?v=3&s=40" srcset="https://avatars1.githubusercontent.com/1technophile?v=3&s=40 1x, https://avatars1.githubusercontent.com/1technophile?v=3&s=80 2x, https://avatars1.githubusercontent.com/1technophile?v=3&s=120 3x, https://avatars1.githubusercontent.com/1technophile?v=3&s=160 4x" /></a>
+          
+          <a href="https://github.com/LArkema" target="_blank"><img class="avatar avatar-small" alt="LArkema" width="40" height="40" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/LArkema?v=3&s=40" srcset="https://avatars1.githubusercontent.com/LArkema?v=3&s=40 1x, https://avatars1.githubusercontent.com/LArkema?v=3&s=80 2x, https://avatars1.githubusercontent.com/LArkema?v=3&s=120 3x, https://avatars1.githubusercontent.com/LArkema?v=3&s=160 4x" /></a>
+          
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/bblanchon/ArduinoJson"><svg viewBox="0 0 496 512" class="icon"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/></svg> GitHub</a>
+          <a class="nav-link" href="/contact/"><svg viewBox="0 0 512 512" class="icon"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" fill="currentColor"/></svg> Contact</a>
+        </nav>
+      </div>
+      <div class="col-md-6 col-lg-2 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="/about/">About</a>
+          <a class="nav-link" href="/privacy/">Privacy</a>
+        </nav>
+      </div>
+   	</div>
+  </div>
+</footer>
+<a href="https://showyourstripes.info/l" target="_blank" data-bs-title="Global warming stripes by Professor Ed Hawkins (University of Reading)" data-bs-toggle="tooltip">
+  <img src="https://showyourstripes.info/stripes/GLOBE---1850-2024-MO.png" alt="Global warming stripes by Professor Ed Hawkins (University of Reading)" class="warming-stripes">
+</a>
+
+</div>
+<script src="/assets/bundle.js?1779382094"></script>
+
+
+</body>
+</html>

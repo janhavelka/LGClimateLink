@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F58JM78930"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-F58JM78930');
+        </script><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi-Fi API -  -  &mdash; Arduino ESP32 latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=a60756f2" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=851bd809" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/chatbot_widget.css?v=10bc4cfd" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/custom.css?v=14753fcc" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=becddca3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=ff8fa330"></script>
+        <script src="../_static/../_static/chatbot_widget_en.js?v=460e0bbd"></script>
+    <script src="../_static/js/theme.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        DOCUMENTATION_OPTIONS.PAGENAME = 'api/wifi';
+        DOCUMENTATION_OPTIONS.PROJECT_SLUG = 'arduino-esp32';
+        DOCUMENTATION_OPTIONS.LATEST_BRANCH_NAME = 'master';
+        DOCUMENTATION_OPTIONS.LANGUAGES = ["en"];
+        DOCUMENTATION_OPTIONS.RELEASE = 'latest';
+        DOCUMENTATION_OPTIONS.LANGUAGE_URL = 'en';
+
+    </script>
+
+    <script type="text/javascript" src=""></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Matter" href="../matter/matter.html" />
+    <link rel="prev" title="USB MSC" href="usb_msc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Arduino ESP32
+              <img src="../_static/espressif-logo.svg" class="logo" alt="Logo"/>
+          </a>
+
+          
+
+          <div class="selectors">
+            <select id="version-select" style="width: 150px;" hidden>
+              <option value="" disabled selected>Choose version...</option>
+            </select>
+          </div>
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#supported-features-and-peripherals">Supported Features and Peripherals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#datasheet">Datasheet</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../libraries.html#apis">APIs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adc.html">ADC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ble.html">BLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dac.html">DAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deepsleep.html">Deep Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="espnow.html">ESP-NOW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet.html">Ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpio.html">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c.html">I2C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2s.html">I2S</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insights.html">ESP Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ledc.html">LED Control (LEDC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html">Network API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulse_counter.html">Pulse Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker.html">ESP Rainmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reset_reason.html">Reset Reason</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rmt.html">Remote Control (RMT)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdio.html">SDIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdmmc.html">SD MMC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial (UART)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sigmadelta.html">SigmaDelta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spi.html">SPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch.html">TOUCH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb.html">USB API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_cdc.html">USB CDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_msc.html">USB MSC</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Wi-Fi API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api-description">API Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-api">Common API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifiap">WiFiAP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ap-configuration">AP Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ap-connection">AP Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifista">WiFiSTA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sta-configuration">STA Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sta-connection">STA Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifimulti">WiFiMulti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifiscan">WiFiScan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#matter-apis">Matter APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#openthread-apis">OpenThread APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#zigbee-apis">Zigbee APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/guides.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_utils.html">Advanced Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_tools.html">Third Party Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guides/migration_guides.html">Migration Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_libraries_test.html">External Libraries Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Arduino ESP32</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../libraries.html">Libraries</a></li>
+      <li class="breadcrumb-item active">Wi-Fi API</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/espressif/arduino-esp32/blob/51e3c81/docs/en/api/wifi.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wi-fi-api">
+<h1>Wi-Fi API<a class="headerlink" href="#wi-fi-api" title="Permalink to this heading"></a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this heading"></a></h2>
+<p>The Wi-Fi API provides support for the 802.11b/g/n protocol driver. This API includes:</p>
+<ul class="simple">
+<li><p>Station mode (STA mode or Wi-Fi client mode). ESP32 connects to an access point</p></li>
+<li><p>AP mode (aka Soft-AP mode or Access Point mode). Devices connect to the ESP32</p></li>
+<li><p>Security modes (WPA2, WPA3 etc.)</p></li>
+<li><p>Scanning for access points</p></li>
+</ul>
+<section id="working-as-ap">
+<h3>Working as AP<a class="headerlink" href="#working-as-ap" title="Permalink to this heading"></a></h3>
+<p>In this mode, the ESP32 is configured as an Access Point (AP) and it’s capable of receiving incoming connections from other devices (stations) by providing
+a Wi-Fi network.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/wifi_esp32_ap.png"><img alt="../_images/wifi_esp32_ap.png" src="../_images/wifi_esp32_ap.png" style="width: 520px;" /></a>
+</figure>
+<p>This mode can be used for serving an HTTP or HTTPS server inside the ESP32, for example.</p>
+</section>
+<section id="working-as-sta">
+<h3>Working as STA<a class="headerlink" href="#working-as-sta" title="Permalink to this heading"></a></h3>
+<p>The STA mode is used to connect the ESP32 to a Wi-Fi network, provided by an Access Point.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/wifi_esp32_sta.png"><img alt="../_images/wifi_esp32_sta.png" src="../_images/wifi_esp32_sta.png" style="width: 520px;" /></a>
+</figure>
+<p>This is the mode to be used if you want to connect your project to the Internet.</p>
+</section>
+</section>
+<section id="api-description">
+<h2>API Description<a class="headerlink" href="#api-description" title="Permalink to this heading"></a></h2>
+<p>Here is the description of the Wi-Fi API.</p>
+</section>
+<section id="common-api">
+<h2>Common API<a class="headerlink" href="#common-api" title="Permalink to this heading"></a></h2>
+<p>Here are the common APIs that are used for both modes, AP and STA.</p>
+<section id="onevent-and-removeevent">
+<h3>onEvent (and removeEvent)<a class="headerlink" href="#onevent-and-removeevent" title="Permalink to this heading"></a></h3>
+<p>Registers a caller-supplied function to be called when Wi-Fi events
+occur. Several forms are available.</p>
+<p>Function pointer callback taking the event ID:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">typedef</span><span class="w"> </span><span class="kr">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">WiFiEventCb</span><span class="p">)(</span><span class="n">arduino_event_id_t</span><span class="p">);</span>
+<span class="n">wifi_event_id_t</span><span class="w"> </span><span class="nf">onEvent</span><span class="p">(</span><span class="n">WiFiEventCb</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Function pointer callback taking an event-ID-and-info struct:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">typedef</span><span class="w"> </span><span class="kr">struct</span><span class="p">{</span>
+<span class="w">    </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="n">event_id</span><span class="p">;</span>
+<span class="w">    </span><span class="n">arduino_event_info_t</span><span class="w"> </span><span class="n">event_info</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">arduino_event_t</span><span class="p">;</span>
+
+<span class="kr">typedef</span><span class="w"> </span><span class="kr">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">WiFiEventSysCb</span><span class="p">)(</span><span class="n">arduino_event_t</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
+<span class="n">wifi_event_id_t</span><span class="w"> </span><span class="nf">onEvent</span><span class="p">(</span><span class="n">WiFiEventSysCb</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Callback using <code class="docutils literal notranslate"><span class="pre">std::function</span></code> taking event ID and info separately:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kr">void</span><span class="p">(</span><span class="n">arduino_event_id_t</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_info_t</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">WiFiEventFuncCb</span><span class="p">;</span>
+<span class="n">wifi_event_id_t</span><span class="w"> </span><span class="nf">onEvent</span><span class="p">(</span><span class="n">WiFiEventFuncCb</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>A similar set of functions are available to remove callbacks:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">removeEvent</span><span class="p">(</span><span class="n">WiFiEventCb</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">removeEvent</span><span class="p">(</span><span class="n">WiFiEventSysCb</span><span class="p">,</span><span class="w"> </span><span class="n">arduino_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">removeEvent</span><span class="p">(</span><span class="n">wifi_event_id_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARDUINO_EVENT_MAX</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In all cases, the subscribing function accepts an optional event type to
+invoke the callback only for that specific event; with the default
+<code class="docutils literal notranslate"><span class="pre">ARDUINO_EVENT_MAX</span></code>, the callback will be invoked for all Wi-Fi events.</p>
+<p>Any callback function is given the event type in a parameter.
+Some of the possible callback function formats also take an
+<code class="docutils literal notranslate"><span class="pre">arduino_event_info_t</span></code> (or use <code class="docutils literal notranslate"><span class="pre">arduino_event_t</span></code> which includes both
+ID and info) which is a union of structs with additional information
+about different event types.</p>
+<p>See
+<a class="reference external" href="https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/src/WiFiGeneric.h">WiFiGeneric.h</a>
+for the list of event types and “info” substructures, and also see a full
+example of event handling: <a class="reference internal" href="#events-example">events example</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Event callback functions are invoked on a separate
+<a class="reference external" href="https://en.wikipedia.org/wiki/Thread_(computing)">thread</a>
+(<a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/freertos_idf.html#tasks">FreeRTOS task</a>)
+independent of the main application thread that runs <code class="docutils literal notranslate"><span class="pre">setup()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">loop()</span></code>. Callback functions must therefore be
+<a class="reference external" href="https://en.wikipedia.org/wiki/Thread_safety">thread-safe</a>;
+they must not access shared/global variables directly without locking,
+and must only call similarly thread-safe functions.</p>
+<p>Some core operations like <code class="docutils literal notranslate"><span class="pre">Serial.print()</span></code> are thread-safe but many
+functions are not. Notably, <code class="docutils literal notranslate"><span class="pre">WiFi.onEvent()</span></code> and <code class="docutils literal notranslate"><span class="pre">WiFi.removeEvent()</span></code>
+are not thread-safe and should never be invoked from a callback thread.</p>
+</div>
+</section>
+<section id="sethostname-and-gethostname">
+<h3>setHostname (and getHostname)<a class="headerlink" href="#sethostname-and-gethostname" title="Permalink to this heading"></a></h3>
+<p>Sets the name the DHCP client uses to identify itself. In a typical network
+setup this will be the name that shows up in the Wi-Fi router’s device list.
+The hostname must be no longer than 32 characters.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">setHostname</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">hostname</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If the hostname is never specified, a default one will be assigned based
+on the chip type and MAC address. The current hostname (default or custom)
+may be retrieved:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="nf">getHostname</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">setHostname()</span></code> function must be called BEFORE Wi-Fi is started with
+<code class="docutils literal notranslate"><span class="pre">WiFi.begin()</span></code>, <code class="docutils literal notranslate"><span class="pre">WiFi.softAP()</span></code>, <code class="docutils literal notranslate"><span class="pre">WiFi.mode()</span></code>, or <code class="docutils literal notranslate"><span class="pre">WiFi.run()</span></code>.
+To change the name, reset Wi-Fi with <code class="docutils literal notranslate"><span class="pre">WiFi.mode(WIFI_MODE_NULL)</span></code>,
+then proceed with <code class="docutils literal notranslate"><span class="pre">WiFi.setHostname(...)</span></code> and restart WiFi from scratch.</p>
+</div>
+</section>
+<section id="usestaticbuffers">
+<h3>useStaticBuffers<a class="headerlink" href="#usestaticbuffers" title="Permalink to this heading"></a></h3>
+<p>This function is used to set the memory allocation mode for the Wi-Fi buffers.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">static</span><span class="w"> </span><span class="kr">void</span><span class="w"> </span><span class="nf">useStaticBuffers</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">bufferMode</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">true</span></code> to use the Wi-Fi buffers memory allocation as <strong>static</strong>.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">false</span></code> to set the buffers memory allocation to <strong>dynamic</strong>.</p></li>
+</ul>
+<p>The use of dynamic allocation is recommended to save memory and reduce resources usage. However, the dynamic performs slightly slower than the static allocation.
+Use static allocation if you want to have more performance and if your application is multi-tasking.</p>
+<p>By default, the memory allocation will be set to <strong>dynamic</strong> if this function is not being used.</p>
+</section>
+<section id="setdualantennaconfig">
+<h3>setDualAntennaConfig<a class="headerlink" href="#setdualantennaconfig" title="Permalink to this heading"></a></h3>
+<p>Configures the Dual antenna functionality. This function should be used only on the <strong>ESP32-WROOM-DA</strong> module or any other ESP32 with RF switch.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">setDualAntennaConfig</span><span class="p">(</span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">gpio_ant1</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">gpio_ant2</span><span class="p">,</span><span class="w"> </span><span class="n">wifi_rx_ant_t</span><span class="w"> </span><span class="n">rx_mode</span><span class="p">,</span><span class="w"> </span><span class="n">wifi_tx_ant_t</span><span class="w"> </span><span class="n">tx_mode</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gpio_ant1</span></code> Configure the GPIO number for the antenna 1 connected to the RF switch (default <code class="docutils literal notranslate"><span class="pre">GPIO2</span></code> on ESP32-WROOM-DA)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpio_ant2</span></code> Configure the GPIO number for the antenna 2 connected to the RF switch (default <code class="docutils literal notranslate"><span class="pre">GPIO25</span></code> on ESP32-WROOM-DA)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rx_mode</span></code> Set the RX antenna mode. See wifi_rx_ant_t for the options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_mode</span></code> Set the TX antenna mode. See wifi_tx_ant_t for the options.</p></li>
+</ul>
+<p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration was successful.</p>
+<p>For the <code class="docutils literal notranslate"><span class="pre">rx_mode</span></code> you can use the following configuration:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_RX_ANT0</span></code> Selects the antenna 1 for all RX activity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_RX_ANT1</span></code> Selects the antenna 2 for all RX activity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_RX_ANT_AUTO</span></code>  Selects the antenna for RX automatically.</p></li>
+</ul>
+<p>For the <code class="docutils literal notranslate"><span class="pre">tx_mode</span></code> you can use the following configuration:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_TX_ANT0</span></code> Selects the antenna 1 for all TX activity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_TX_ANT1</span></code> Selects the antenna 2 for all TX activity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WIFI_TX_ANT_AUTO</span></code> Selects the antenna for TX automatically.</p></li>
+</ul>
+</section>
+</section>
+<section id="wifiap">
+<h2>WiFiAP<a class="headerlink" href="#wifiap" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">WiFiAP</span></code> is used to configure and manage the Wi-Fi as an Access Point. This is where you can find the related functions for the AP.</p>
+<section id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h3>
+<p>To start the Wi-Fi as an Access Point.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">WiFi</span><span class="p">.</span><span class="n">softAP</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Please see the full WiFiAP example in: <a class="reference internal" href="#ap-example">ap example</a>.</p>
+</section>
+</section>
+<section id="ap-configuration">
+<h2>AP Configuration<a class="headerlink" href="#ap-configuration" title="Permalink to this heading"></a></h2>
+<section id="softap">
+<h3>softAP<a class="headerlink" href="#softap" title="Permalink to this heading"></a></h3>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">softAP</span></code> to configure the Wi-Fi AP characteristics:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">softAP</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">ssid_hidden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">max_connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">ftm_responder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssid</span></code> sets the Wi-Fi network SSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passphrase</span></code> sets the Wi-Fi network password. If the network is open, set as <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> configures the Wi-Fi channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssid_hidden</span></code> sets the network as hidden.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_connection</span></code> sets the maximum number of simultaneous connections. The default is 4.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ftm_responder</span></code> sets the Wi-Fi FTM responder feature. <strong>Only for ESP32-S2 and ESP32-C3 SoC!</strong></p></li>
+</ul>
+<p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration was successful.</p>
+</section>
+<section id="softapconfig">
+<h3>softAPConfig<a class="headerlink" href="#softapconfig" title="Permalink to this heading"></a></h3>
+<p>Function used to configure the IP as static (fixed) as well as the gateway and subnet.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">softAPConfig</span><span class="p">(</span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">local_ip</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">gateway</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">subnet</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">local_ip</span></code> sets the local IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> sets the gateway IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet</span></code> sets the subnet mask.</p></li>
+</ul>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+</section>
+</section>
+<section id="ap-connection">
+<h2>AP Connection<a class="headerlink" href="#ap-connection" title="Permalink to this heading"></a></h2>
+<section id="softapdisconnect">
+<h3>softAPdisconnect<a class="headerlink" href="#softapdisconnect" title="Permalink to this heading"></a></h3>
+<p>Function used to force the AP disconnection.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">softAPdisconnect</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">wifioff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wifioff</span></code> sets the Wi-Fi off if <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+</section>
+<section id="softapgetstationnum">
+<h3>softAPgetStationNum<a class="headerlink" href="#softapgetstationnum" title="Permalink to this heading"></a></h3>
+<p>This function returns the number of clients connected to the AP.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">uint8_t</span><span class="w"> </span><span class="nf">softAPgetStationNum</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="softapip">
+<h3>softAPIP<a class="headerlink" href="#softapip" title="Permalink to this heading"></a></h3>
+<p>Function to get the AP IPv4 address.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">softAPIP</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The function will return the AP IP address in <code class="docutils literal notranslate"><span class="pre">IPAddress</span></code> format.</p>
+</section>
+<section id="softapbroadcastip">
+<h3>softAPBroadcastIP<a class="headerlink" href="#softapbroadcastip" title="Permalink to this heading"></a></h3>
+<p>Function to get the AP IPv4 broadcast address.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">softAPBroadcastIP</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The function will return the AP broadcast address in <code class="docutils literal notranslate"><span class="pre">IPAddress</span></code> format.</p>
+</section>
+<section id="softapnetworkid">
+<h3>softAPNetworkID<a class="headerlink" href="#softapnetworkid" title="Permalink to this heading"></a></h3>
+<p>Get the softAP network ID.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">softAPNetworkID</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The function will return the AP network address in <code class="docutils literal notranslate"><span class="pre">IPAddress</span></code> format.</p>
+</section>
+<section id="softapsubnetcidr">
+<h3>softAPSubnetCIDR<a class="headerlink" href="#softapsubnetcidr" title="Permalink to this heading"></a></h3>
+<p>Get the softAP subnet CIDR.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">uint8_t</span><span class="w"> </span><span class="nf">softAPSubnetCIDR</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="softapsubnetmask">
+<h3>softAPSubnetMask<a class="headerlink" href="#softapsubnetmask" title="Permalink to this heading"></a></h3>
+<p>Get the softAP subnet mask.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">softAPSubnetMask</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="softapenableipv6">
+<h3>softAPenableIPv6<a class="headerlink" href="#softapenableipv6" title="Permalink to this heading"></a></h3>
+<p>Function used to enable the IPv6 support.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">softAPenableIPv6</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="kr">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+</section>
+<section id="softapipv6">
+<h3>softAPIPv6<a class="headerlink" href="#softapipv6" title="Permalink to this heading"></a></h3>
+<p>Function to get the IPv6 address.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">softAPlinkLocalIPv6</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The function will return the AP IPv6 address in <code class="docutils literal notranslate"><span class="pre">IPAddress</span></code> format.</p>
+</section>
+<section id="softapgethostname">
+<h3>softAPgetHostname<a class="headerlink" href="#softapgethostname" title="Permalink to this heading"></a></h3>
+<p>Function to get the AP hostname.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">softAPgetHostname</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="softapsethostname">
+<h3>softAPsetHostname<a class="headerlink" href="#softapsethostname" title="Permalink to this heading"></a></h3>
+<p>Function to set the AP hostname.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">softAPsetHostname</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hostname</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> sets the device hostname.</p></li>
+</ul>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+</section>
+<section id="softapmacaddress">
+<h3>softAPmacAddress<a class="headerlink" href="#softapmacaddress" title="Permalink to this heading"></a></h3>
+<p>Function to define the AP MAC address.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="nf">softAPmacAddress</span><span class="p">(</span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">mac</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> sets the new MAC address.</p></li>
+</ul>
+<p>Function to get the AP MAC address.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="nf">softAPmacAddress</span><span class="p">(</span><span class="kr">void</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="softapssid">
+<h3>softAPSSID<a class="headerlink" href="#softapssid" title="Permalink to this heading"></a></h3>
+<p>Function to get the AP SSID.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="nf">softAPSSID</span><span class="p">(</span><span class="kr">void</span><span class="p">)</span><span class="w"> </span><span class="kr">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Returns the AP SSID.</p>
+</section>
+</section>
+<section id="wifista">
+<h2>WiFiSTA<a class="headerlink" href="#wifista" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">WiFiSTA</span></code> is used to configure and manage the Wi-Fi as Station. The related functions for the STA are here.</p>
+<section id="id1">
+<h3>Basic Usage<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>The following code shows the basic usage of the WifiSTA functionality.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where the <code class="docutils literal notranslate"><span class="pre">ssid</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code> are from the network you want to connect the ESP32.</p>
+<p>To check if the connection is successful, you can use:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nf">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>After a successful connection, you can print the IP address given by the network.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;IP address: &quot;</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">localIP</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>Please see the full example of the WiFiSTA in: <a class="reference internal" href="#sta-example">sta example</a>.</p>
+</section>
+</section>
+<section id="sta-configuration">
+<h2>STA Configuration<a class="headerlink" href="#sta-configuration" title="Permalink to this heading"></a></h2>
+<section id="begin">
+<h3>begin<a class="headerlink" href="#begin" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Functions <code class="docutils literal notranslate"><span class="pre">begin</span></code> are used to configure and start the Wi-Fi.</p></li>
+</ul>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">wl_status_t</span><span class="w"> </span><span class="nf">begin</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">bssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">tryConnect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssid</span></code> sets the AP SSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passphrase</span></code> sets the AP password. Set as <code class="docutils literal notranslate"><span class="pre">NULL</span></code> for open networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> sets the Wi-Fi channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span> <span class="pre">bssid</span></code> sets the AP BSSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tryConnect</span></code> sets <code class="docutils literal notranslate"><span class="pre">true</span></code> to connect to the configured network automatically.</p></li>
+</ul>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">wl_status_t</span><span class="w"> </span><span class="nf">begin</span><span class="p">(</span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">bssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">tryConnect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssid</span></code> sets the AP SSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passphrase</span></code> sets the AP password. Set as <code class="docutils literal notranslate"><span class="pre">NULL</span></code> for open networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> sets the Wi-Fi channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bssid</span></code> sets the AP BSSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tryConnect</span></code> sets <code class="docutils literal notranslate"><span class="pre">true</span></code> to connect to the configured network automatically.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">begin</span></code> function also accepts <code class="docutils literal notranslate"><span class="pre">String</span></code> types for the <code class="docutils literal notranslate"><span class="pre">ssid</span></code> and <code class="docutils literal notranslate"><span class="pre">passphrase</span></code> parameters, providing convenient overloads for use with Arduino <code class="docutils literal notranslate"><span class="pre">String</span></code> objects.</p>
+</div>
+<p>Function to start the connection after being configured.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">wl_status_t</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="connect">
+<h3>connect<a class="headerlink" href="#connect" title="Permalink to this heading"></a></h3>
+<p>Function to connect to a Wi-Fi network. This is called internally by <code class="docutils literal notranslate"><span class="pre">begin</span></code> but can also be used directly for more control.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">connect</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">bssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">tryConnect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssid</span></code> sets the AP SSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passphrase</span></code> sets the AP password. Set as <code class="docutils literal notranslate"><span class="pre">NULL</span></code> for open networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> sets the Wi-Fi channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bssid</span></code> sets the AP BSSID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tryConnect</span></code> sets <code class="docutils literal notranslate"><span class="pre">true</span></code> to connect to the configured network automatically.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">connect</span></code> function also accepts <code class="docutils literal notranslate"><span class="pre">String</span></code> types for the <code class="docutils literal notranslate"><span class="pre">ssid</span></code> and <code class="docutils literal notranslate"><span class="pre">passphrase</span></code> parameters, providing convenient overloads for use with Arduino <code class="docutils literal notranslate"><span class="pre">String</span></code> objects.</p>
+</div>
+</section>
+<section id="config">
+<h3>config<a class="headerlink" href="#config" title="Permalink to this heading"></a></h3>
+<p>Function <code class="docutils literal notranslate"><span class="pre">config</span></code> is used to configure Wi-Fi. After configuring, you can call function <code class="docutils literal notranslate"><span class="pre">begin</span></code> to start the Wi-Fi process.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">config</span><span class="p">(</span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">local_ip</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">gateway</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">subnet</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">dns1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kr">uint32_t</span><span class="p">)</span><span class="mh">0x00000000</span><span class="p">,</span><span class="w"> </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">dns2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kr">uint32_t</span><span class="p">)</span><span class="mh">0x00000000</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">local_ip</span></code> sets the local IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> sets the gateway IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet</span></code> sets the subnet mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns1</span></code> sets the DNS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns2</span></code> sets the DNS alternative option.</p></li>
+</ul>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">IPAddress</span></code> format is defined by 4 bytes as described here:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="p">(</span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">first_octet</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">second_octet</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">third_octet</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">fourth_octet</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">IPAddress</span><span class="w"> </span><span class="nf">local_ip</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See the <code class="docutils literal notranslate"><span class="pre">WiFiClientStaticIP.ino</span></code> for more details on how to use this feature.</p>
+</section>
+</section>
+<section id="sta-connection">
+<h2>STA Connection<a class="headerlink" href="#sta-connection" title="Permalink to this heading"></a></h2>
+<section id="reconnect">
+<h3>reconnect<a class="headerlink" href="#reconnect" title="Permalink to this heading"></a></h3>
+<p>Function used to reconnect the Wi-Fi connection.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">reconnect</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="disconnect">
+<h3>disconnect<a class="headerlink" href="#disconnect" title="Permalink to this heading"></a></h3>
+<p>Function to force disconnection.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">disconnect</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">wifioff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">eraseap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wifioff</span></code> use <code class="docutils literal notranslate"><span class="pre">true</span></code> to turn the Wi-Fi radio off.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eraseap</span></code> use <code class="docutils literal notranslate"><span class="pre">true</span></code> to erase the AP configuration from the NVS memory.</p></li>
+</ul>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the configuration is successful.</p>
+</section>
+<section id="isconnected">
+<h3>isConnected<a class="headerlink" href="#isconnected" title="Permalink to this heading"></a></h3>
+<p>Function used to get the connection state.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">isConnected</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Return the connection state.</p>
+</section>
+<section id="setautoconnect">
+<h3>setAutoConnect<a class="headerlink" href="#setautoconnect" title="Permalink to this heading"></a></h3>
+<p>Function is deprecated.</p>
+</section>
+<section id="getautoconnect">
+<h3>getAutoConnect<a class="headerlink" href="#getautoconnect" title="Permalink to this heading"></a></h3>
+<p>Function is deprecated.</p>
+</section>
+<section id="setautoreconnect">
+<h3>setAutoReconnect<a class="headerlink" href="#setautoreconnect" title="Permalink to this heading"></a></h3>
+<p>Function used to set the automatic reconnection if the connection is lost.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">setAutoReconnect</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">autoReconnect</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoConnect</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable this option.</p></li>
+</ul>
+</section>
+<section id="getautoreconnect">
+<h3>getAutoReconnect<a class="headerlink" href="#getautoreconnect" title="Permalink to this heading"></a></h3>
+<p>Function used to get the automatic reconnection if the connection is lost.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">getAutoReconnect</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>The function will return <code class="docutils literal notranslate"><span class="pre">true</span></code> if this setting is enabled.</p>
+</section>
+<section id="setminsecurity">
+<h3>setMinSecurity<a class="headerlink" href="#setminsecurity" title="Permalink to this heading"></a></h3>
+<p>Function used to set the minimum security for AP to be considered connectable.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">setMinSecurity</span><span class="p">(</span><span class="n">wifi_auth_mode_t</span><span class="w"> </span><span class="n">minSecurity</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minSecurity</span></code> is the minimum security for AP to be considered connectable. Default is <code class="docutils literal notranslate"><span class="pre">WIFI_AUTH_WPA2_PSK</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="wifimulti">
+<h2>WiFiMulti<a class="headerlink" href="#wifimulti" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">WiFiMulti</span></code> allows you to add more than one option for the AP connection while running as a station.</p>
+<p>To add the AP, use the following function. You can add multiple AP’s and this library will handle the connection.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">addAP</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Or, if you have WPA2-Enterprise support enabled (<code class="docutils literal notranslate"><span class="pre">CONFIG_ESP_WIFI_ENTERPRISE_SUPPORT</span></code>):</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">addAP</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>For:</p>
+<ul class="simple">
+<li><p>Open networks, <code class="docutils literal notranslate"><span class="pre">ssid</span></code> must be set.</p></li>
+<li><p>Networks using a passphrase, e.g. WPA2-PSK, <code class="docutils literal notranslate"><span class="pre">passphrase</span></code> must be set.</p></li>
+<li><p>Networks using WPA2-Enterprise with PEAPv0/EAP-MSCHAPv2, <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">passphrase</span></code> must be set to the username and password required for inner authentication (MSCHAPv2), respectively. <code class="docutils literal notranslate"><span class="pre">identity</span></code> must be set to the “anonymous identity” used for PEAP, if required by the network, or must be set to an empty string otherwise. Note that WPA2-Enterprise networks using certificate-based authentication (e.g. EAP-TLS) are currently not supported. It is also currently not possible to supply a CA certificate to validate the server certificate for PEAP. Given these limitations, you should consider whether this is secure enough for your needs.</p></li>
+</ul>
+<p>After adding the AP’s, run by the following function.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">uint8_t</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">connectTimeout</span><span class="o">=</span><span class="mi">5000</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To see how to use the <code class="docutils literal notranslate"><span class="pre">WiFiMulti</span></code>, take a look at the <code class="docutils literal notranslate"><span class="pre">WiFiMulti.ino</span></code>, <code class="docutils literal notranslate"><span class="pre">WiFiMultiAdvanced.ino</span></code> and <code class="docutils literal notranslate"><span class="pre">WiFiMultiEnterprise.ino</span></code> examples available.</p>
+</section>
+<section id="wifiscan">
+<h2>WiFiScan<a class="headerlink" href="#wifiscan" title="Permalink to this heading"></a></h2>
+<p>To perform the Wi-Fi scan for networks, you can use the following functions:</p>
+<p>Start scan Wi-Fi networks available.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int16_t</span><span class="w"> </span><span class="nf">scanNetworks</span><span class="p">(</span><span class="kr">bool</span><span class="w"> </span><span class="n">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">show_hidden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">passive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">,</span><span class="w"> </span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">max_ms_per_chan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Called to get the scan state in Async mode.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int16_t</span><span class="w"> </span><span class="nf">scanComplete</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Delete last scan result from RAM.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">scanDelete</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Loads all infos from a scanned Wi-Fi in to the ptr parameters.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">getNetworkInfo</span><span class="p">(</span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">networkItem</span><span class="p">,</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">encryptionType</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">RSSI</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">BSSID</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">channel</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To see how to use the <code class="docutils literal notranslate"><span class="pre">WiFiScan</span></code>, take a look at the <code class="docutils literal notranslate"><span class="pre">WiFiScan.ino</span></code> or <code class="docutils literal notranslate"><span class="pre">WiFiScanAsync.ino</span></code> example available.</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi/examples">Complete list of Wi-Fi examples</a>.</p>
+<section id="wi-fi-ap-example">
+<span id="ap-example"></span><h3>Wi-Fi AP Example<a class="headerlink" href="#wi-fi-ap-example" title="Permalink to this heading"></a></h3>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">  WiFiAccessPoint.ino creates a WiFi access point and provides a web server on it.</span>
+
+<span class="cm">  Steps:</span>
+<span class="cm">  1. Connect to the access point &quot;yourAp&quot;</span>
+<span class="cm">  2. Point your web browser to http://192.168.4.1/H to turn the LED on or http://192.168.4.1/L to turn it off</span>
+<span class="cm">     OR</span>
+<span class="cm">     Run raw TCP &quot;GET /H&quot; and &quot;GET /L&quot; on PuTTY terminal with 192.168.4.1 as IP address and 80 as port</span>
+
+<span class="cm">  Created for arduino-esp32 on 04 July, 2018</span>
+<span class="cm">  by Elochukwu Ifediora (fedy0)</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFi.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;NetworkClient.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFiAP.h&gt;</span>
+
+<span class="cp">#ifndef LED_BUILTIN</span>
+<span class="cp">#define LED_BUILTIN 2  </span><span class="c1">// Set the GPIO pin where you connected your test LED or comment this line out if your dev board has a built-in LED</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// Set these to your desired credentials.</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;yourAP&quot;</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;yourPassword&quot;</span><span class="p">;</span>
+
+<span class="n">NetworkServer</span><span class="w"> </span><span class="nf">server</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="kr">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Configuring access point...&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// You can remove the password parameter if you want the AP to be open.</span>
+<span class="w">  </span><span class="c1">// a valid password must have more than 7 characters</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">WiFi</span><span class="p">.</span><span class="n">softAP</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">log_e</span><span class="p">(</span><span class="s">&quot;Soft AP creation failed.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nf">IPAddress</span><span class="w"> </span><span class="n">myIP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">WiFi</span><span class="p">.</span><span class="n">softAPIP</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;AP IP address: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">myIP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">server</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Server started&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">NetworkClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">server</span><span class="p">.</span><span class="n">accept</span><span class="p">();</span><span class="w">  </span><span class="c1">// listen for incoming clients</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                     </span><span class="c1">// if you get a client,</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;New Client.&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// print a message out the serial port</span>
+<span class="w">    </span><span class="kr">String</span><span class="w"> </span><span class="n">currentLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// make a String to hold incoming data from the client</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="nf">connected</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// loop while the client&#39;s connected</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// if there&#39;s bytes to read from the client,</span>
+<span class="w">        </span><span class="kr">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span><span class="w">     </span><span class="c1">// read a byte, then</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">            </span><span class="c1">// print it out the serial monitor</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">            </span><span class="c1">// if the byte is a newline character</span>
+
+<span class="w">          </span><span class="c1">// if the current line is blank, you got two newline characters in a row.</span>
+<span class="w">          </span><span class="c1">// that&#39;s the end of the client HTTP request, so send a response:</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentLine</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)</span>
+<span class="w">            </span><span class="c1">// and a content-type so the client knows what&#39;s coming, then a blank line:</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;HTTP/1.1 200 OK&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Content-type:text/html&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+
+<span class="w">            </span><span class="c1">// the content of the HTTP response follows the header:</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Click &lt;a href=</span><span class="se">\&quot;</span><span class="s">/H</span><span class="se">\&quot;</span><span class="s">&gt;here&lt;/a&gt; to turn ON the LED.&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Click &lt;a href=</span><span class="se">\&quot;</span><span class="s">/L</span><span class="se">\&quot;</span><span class="s">&gt;here&lt;/a&gt; to turn OFF the LED.&lt;br&gt;&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// The HTTP response ends with another blank line:</span>
+<span class="w">            </span><span class="n">client</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// break out of the while loop:</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// if you got a newline, then clear currentLine:</span>
+<span class="w">            </span><span class="n">currentLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\r&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// if you got anything else but a carriage return character,</span>
+<span class="w">          </span><span class="n">currentLine</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">      </span><span class="c1">// add it to the end of the currentLine</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Check to see if the client request was &quot;GET /H&quot; or &quot;GET /L&quot;:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentLine</span><span class="p">.</span><span class="n">endsWith</span><span class="p">(</span><span class="s">&quot;GET /H&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="kr">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="kr">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// GET /H turns the LED on</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentLine</span><span class="p">.</span><span class="n">endsWith</span><span class="p">(</span><span class="s">&quot;GET /L&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="kr">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// GET /L turns the LED off</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// close the connection:</span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="nf">stop</span><span class="p">();</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Client Disconnected.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="wi-fi-sta-example">
+<span id="sta-example"></span><h3>Wi-Fi STA Example<a class="headerlink" href="#wi-fi-sta-example" title="Permalink to this heading"></a></h3>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">    Go to thingspeak.com and create an account if you don&#39;t have one already.</span>
+<span class="cm">    After logging in, click on the &quot;New Channel&quot; button to create a new channel for your data. This is where your data will be stored and displayed.</span>
+<span class="cm">    Fill in the Name, Description, and other fields for your channel as desired, then click the &quot;Save Channel&quot; button.</span>
+<span class="cm">    Take note of the &quot;Write API Key&quot; located in the &quot;API keys&quot; tab, this is the key you will use to send data to your channel.</span>
+<span class="cm">    Replace the channelID from tab &quot;Channel Settings&quot; and privateKey with &quot;Read API Keys&quot; from &quot;API Keys&quot; tab.</span>
+<span class="cm">    Replace the host variable with the thingspeak server hostname &quot;api.thingspeak.com&quot;</span>
+<span class="cm">    Upload the sketch to your ESP32 board and make sure that the board is connected to the internet. The ESP32 should now send data to your Thingspeak channel at the intervals specified by the loop function.</span>
+<span class="cm">    Go to the channel view page on thingspeak and check the &quot;Field1&quot; for the new incoming data.</span>
+<span class="cm">    You can use the data visualization and analysis tools provided by Thingspeak to display and process your data in various ways.</span>
+<span class="cm">    Please note, that Thingspeak accepts only integer values.</span>
+
+<span class="cm">    You can later check the values at https://thingspeak.com/channels/2005329</span>
+<span class="cm">    Please note that this public channel can be accessed by anyone and it is possible that more people will write their values.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFi.h&gt;</span>
+
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-ssid&quot;</span><span class="p">;</span><span class="w">          </span><span class="c1">// Change this to your WiFi SSID</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-password&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Change this to your WiFi password</span>
+
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;api.thingspeak.com&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// This should not be changed</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">httpPort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w">                        </span><span class="c1">// This should not be changed</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="n">channelID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2005329&quot;</span><span class="p">;</span><span class="w">             </span><span class="c1">// Change this to your channel ID</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="n">writeApiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;V6YOTILH9I7D51F9&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Change this to your Write API key</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="n">readApiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;34W6LGLIFXD56MPM&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Change this to your Read API key</span>
+
+<span class="c1">// The default example accepts one data filed named &quot;field1&quot;</span>
+<span class="c1">// For your own server you can ofcourse create more of them.</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">field1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="kr">int</span><span class="w"> </span><span class="n">numberOfResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Number of results to be read</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">fieldNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Field number which will be read out</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// We start by connecting to a WiFi network</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;******************************************************&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Connecting to &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nf">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi connected&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;IP address: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">localIP</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">readResponse</span><span class="p">(</span><span class="n">NetworkClient</span><span class="w"> </span><span class="o">*</span><span class="n">client</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="o">-&gt;</span><span class="nf">available</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;&gt;&gt;&gt; Client Timeout !&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">client</span><span class="o">-&gt;</span><span class="nf">stop</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Read all the lines of the reply from server and print them to Serial</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="o">-&gt;</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">String</span><span class="w"> </span><span class="nf">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="o">-&gt;</span><span class="nf">readStringUntil</span><span class="p">(</span><span class="sc">&#39;\r&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="nf">line</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Closing connection</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">NetworkClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">footer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="s">&quot; HTTP/1.1</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">host</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Connection: close</span><span class="se">\r\n\r\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// WRITE --------------------------------------------------------------------------------------------</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">client</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">httpPort</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;GET /update?api_key=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">writeApiKey</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&amp;field1=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">field1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">footer</span><span class="p">);</span>
+<span class="w">  </span><span class="n">readResponse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">client</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// READ --------------------------------------------------------------------------------------------</span>
+
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">readRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;GET /channels/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">channelID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/fields/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fieldNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.json?results=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numberOfResults</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; HTTP/1.1</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span>
+<span class="w">                       </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Connection: close</span><span class="se">\r\n\r\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">client</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">httpPort</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">readRequest</span><span class="p">);</span>
+<span class="w">  </span><span class="n">readResponse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">client</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// -------------------------------------------------------------------------------------------------</span>
+
+<span class="w">  </span><span class="o">++</span><span class="n">field1</span><span class="p">;</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="wi-fi-events-example">
+<span id="events-example"></span><h3>Wi-Fi Events Example<a class="headerlink" href="#wi-fi-events-example" title="Permalink to this heading"></a></h3>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *  This sketch shows the WiFi event usage</span>
+<span class="cm"> *</span>
+<span class="cm">*/</span>
+
+<span class="cm">/*</span>
+<span class="cm">* WiFi Events</span>
+
+<span class="cm">0  ARDUINO_EVENT_WIFI_READY               &lt; ESP32 WiFi ready</span>
+<span class="cm">1  ARDUINO_EVENT_WIFI_SCAN_DONE                &lt; ESP32 finish scanning AP</span>
+<span class="cm">2  ARDUINO_EVENT_WIFI_STA_START                &lt; ESP32 station start</span>
+<span class="cm">3  ARDUINO_EVENT_WIFI_STA_STOP                 &lt; ESP32 station stop</span>
+<span class="cm">4  ARDUINO_EVENT_WIFI_STA_CONNECTED            &lt; ESP32 station connected to AP</span>
+<span class="cm">5  ARDUINO_EVENT_WIFI_STA_DISCONNECTED         &lt; ESP32 station disconnected from AP</span>
+<span class="cm">6  ARDUINO_EVENT_WIFI_STA_AUTHMODE_CHANGE      &lt; the auth mode of AP connected by ESP32 station changed</span>
+<span class="cm">7  ARDUINO_EVENT_WIFI_STA_GOT_IP               &lt; ESP32 station got IP from connected AP</span>
+<span class="cm">8  ARDUINO_EVENT_WIFI_STA_LOST_IP              &lt; ESP32 station lost IP and the IP is reset to 0</span>
+<span class="cm">9  ARDUINO_EVENT_WPS_ER_SUCCESS       &lt; ESP32 station wps succeeds in enrollee mode</span>
+<span class="cm">10 ARDUINO_EVENT_WPS_ER_FAILED        &lt; ESP32 station wps fails in enrollee mode</span>
+<span class="cm">11 ARDUINO_EVENT_WPS_ER_TIMEOUT       &lt; ESP32 station wps timeout in enrollee mode</span>
+<span class="cm">12 ARDUINO_EVENT_WPS_ER_PIN           &lt; ESP32 station wps pin code in enrollee mode</span>
+<span class="cm">13 ARDUINO_EVENT_WIFI_AP_START                 &lt; ESP32 soft-AP start</span>
+<span class="cm">14 ARDUINO_EVENT_WIFI_AP_STOP                  &lt; ESP32 soft-AP stop</span>
+<span class="cm">15 ARDUINO_EVENT_WIFI_AP_STACONNECTED          &lt; a station connected to ESP32 soft-AP</span>
+<span class="cm">16 ARDUINO_EVENT_WIFI_AP_STADISCONNECTED       &lt; a station disconnected from ESP32 soft-AP</span>
+<span class="cm">17 ARDUINO_EVENT_WIFI_AP_STAIPASSIGNED         &lt; ESP32 soft-AP assign an IP to a connected station</span>
+<span class="cm">18 ARDUINO_EVENT_WIFI_AP_PROBEREQRECVED        &lt; Receive probe request packet in soft-AP interface</span>
+<span class="cm">19 ARDUINO_EVENT_WIFI_AP_GOT_IP6               &lt; ESP32 ap interface v6IP addr is preferred</span>
+<span class="cm">19 ARDUINO_EVENT_WIFI_STA_GOT_IP6              &lt; ESP32 station interface v6IP addr is preferred</span>
+<span class="cm">20 ARDUINO_EVENT_ETH_START                &lt; ESP32 ethernet start</span>
+<span class="cm">21 ARDUINO_EVENT_ETH_STOP                 &lt; ESP32 ethernet stop</span>
+<span class="cm">22 ARDUINO_EVENT_ETH_CONNECTED            &lt; ESP32 ethernet phy link up</span>
+<span class="cm">23 ARDUINO_EVENT_ETH_DISCONNECTED         &lt; ESP32 ethernet phy link down</span>
+<span class="cm">24 ARDUINO_EVENT_ETH_GOT_IP               &lt; ESP32 ethernet got IP from connected AP</span>
+<span class="cm">19 ARDUINO_EVENT_ETH_GOT_IP6              &lt; ESP32 ethernet interface v6IP addr is preferred</span>
+<span class="cm">25 ARDUINO_EVENT_MAX</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFi.h&gt;</span>
+
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-ssid&quot;</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-password&quot;</span><span class="p">;</span>
+
+<span class="c1">// WARNING: This function is called from a separate FreeRTOS task (thread)!</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">WiFiEvent</span><span class="p">(</span><span class="n">WiFiEvent_t</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[WiFi-event] event: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_READY</span><span class="p">:</span><span class="w">               </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi interface ready&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_SCAN_DONE</span><span class="p">:</span><span class="w">           </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Completed scan for access points&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_START</span><span class="p">:</span><span class="w">           </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi client started&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_STOP</span><span class="p">:</span><span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi clients stopped&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_CONNECTED</span><span class="p">:</span><span class="w">       </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Connected to access point&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_DISCONNECTED</span><span class="p">:</span><span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Disconnected from WiFi access point&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_AUTHMODE_CHANGE</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Authentication mode of access point has changed&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_GOT_IP</span><span class="p">:</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Obtained IP address: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">localIP</span><span class="p">());</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_LOST_IP</span><span class="p">:</span><span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Lost IP address and IP address is reset to 0&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WPS_ER_SUCCESS</span><span class="p">:</span><span class="w">          </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi Protected Setup (WPS): succeeded in enrollee mode&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WPS_ER_FAILED</span><span class="p">:</span><span class="w">           </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi Protected Setup (WPS): failed in enrollee mode&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WPS_ER_TIMEOUT</span><span class="p">:</span><span class="w">          </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi Protected Setup (WPS): timeout in enrollee mode&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WPS_ER_PIN</span><span class="p">:</span><span class="w">              </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi Protected Setup (WPS): pin code in enrollee mode&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_START</span><span class="p">:</span><span class="w">           </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi access point started&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_STOP</span><span class="p">:</span><span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi access point  stopped&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_STACONNECTED</span><span class="p">:</span><span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Client connected&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_STADISCONNECTED</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Client disconnected&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_STAIPASSIGNED</span><span class="p">:</span><span class="w">   </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Assigned IP address to client&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_PROBEREQRECVED</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Received probe request&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_AP_GOT_IP6</span><span class="p">:</span><span class="w">         </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;AP IPv6 is preferred&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_WIFI_STA_GOT_IP6</span><span class="p">:</span><span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;STA IPv6 is preferred&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_GOT_IP6</span><span class="p">:</span><span class="w">             </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Ethernet IPv6 is preferred&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_START</span><span class="p">:</span><span class="w">               </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Ethernet started&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_STOP</span><span class="p">:</span><span class="w">                </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Ethernet stopped&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_CONNECTED</span><span class="p">:</span><span class="w">           </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Ethernet connected&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_DISCONNECTED</span><span class="p">:</span><span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Ethernet disconnected&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ARDUINO_EVENT_ETH_GOT_IP</span><span class="p">:</span><span class="w">              </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Obtained IP address&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w">                                    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// WARNING: This function is called from a separate FreeRTOS task (thread)!</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">WiFiGotIP</span><span class="p">(</span><span class="n">WiFiEvent_t</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">WiFiEventInfo_t</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;WiFi connected&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;IP address: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="nf">IPAddress</span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">got_ip</span><span class="p">.</span><span class="n">ip_info</span><span class="p">.</span><span class="n">ip</span><span class="p">.</span><span class="n">addr</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// delete old config</span>
+<span class="w">  </span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">disconnect</span><span class="p">(</span><span class="kr">true</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Examples of different ways to register wifi events;</span>
+<span class="w">  </span><span class="c1">// these handlers will be called from another thread.</span>
+<span class="w">  </span><span class="nf">WiFi</span><span class="p">.</span><span class="n">onEvent</span><span class="p">(</span><span class="n">WiFiEvent</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">WiFi</span><span class="p">.</span><span class="n">onEvent</span><span class="p">(</span><span class="n">WiFiGotIP</span><span class="p">,</span><span class="w"> </span><span class="n">WiFiEvent_t</span><span class="o">::</span><span class="n">ARDUINO_EVENT_WIFI_STA_GOT_IP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">WiFiEventId_t</span><span class="w"> </span><span class="n">eventID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">WiFi</span><span class="p">.</span><span class="n">onEvent</span><span class="p">(</span>
+<span class="w">    </span><span class="p">[](</span><span class="n">WiFiEvent_t</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">WiFiEventInfo_t</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;WiFi lost connection. Reason: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">wifi_sta_disconnected</span><span class="p">.</span><span class="n">reason</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="n">WiFiEvent_t</span><span class="o">::</span><span class="n">ARDUINO_EVENT_WIFI_STA_DISCONNECTED</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Remove WiFi event</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;WiFi Event ID: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">eventID</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// WiFi.removeEvent(eventID);</span>
+
+<span class="w">  </span><span class="nf">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Wait for WiFi... &quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usb_msc.html" class="btn btn-neutral float-left" title="USB MSC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../matter/matter.html" class="btn btn-neutral float-right" title="Matter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016 - 2026, Espressif Systems (Shanghai) Co., Ltd.</p>
+  </div>
+
+  <ul class="footer">
+        <li>
+	    
+            
+            Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/espressif/sphinx_idf_theme">theme</a>  based on <a href="https://github.com/readthedocs/sphinx_rtd_theme">Read the Docs Sphinx Theme</a>.
+         </li>
+
+  </ul> 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

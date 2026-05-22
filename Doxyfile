@@ -1,0 +1,8 @@
+PROJECT_NAME           = "LGClimateLink"
+OUTPUT_DIRECTORY       = docs/doxygen
+INPUT                  = include src
+RECURSIVE              = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+EXTRACT_ALL            = NO
+QUIET                  = YES

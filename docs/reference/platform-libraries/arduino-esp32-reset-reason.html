@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F58JM78930"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-F58JM78930');
+        </script><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Reason -  -  &mdash; Arduino ESP32 latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=a60756f2" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=851bd809" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/chatbot_widget.css?v=10bc4cfd" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/custom.css?v=14753fcc" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=becddca3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=ff8fa330"></script>
+        <script src="../_static/../_static/chatbot_widget_en.js?v=460e0bbd"></script>
+    <script src="../_static/js/theme.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        DOCUMENTATION_OPTIONS.PAGENAME = 'api/reset_reason';
+        DOCUMENTATION_OPTIONS.PROJECT_SLUG = 'arduino-esp32';
+        DOCUMENTATION_OPTIONS.LATEST_BRANCH_NAME = 'master';
+        DOCUMENTATION_OPTIONS.LANGUAGES = ["en"];
+        DOCUMENTATION_OPTIONS.RELEASE = 'latest';
+        DOCUMENTATION_OPTIONS.LANGUAGE_URL = 'en';
+
+    </script>
+
+    <script type="text/javascript" src=""></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Remote Control (RMT)" href="rmt.html" />
+    <link rel="prev" title="ESP Rainmaker" href="rainmaker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Arduino ESP32
+              <img src="../_static/espressif-logo.svg" class="logo" alt="Logo"/>
+          </a>
+
+          
+
+          <div class="selectors">
+            <select id="version-select" style="width: 150px;" hidden>
+              <option value="" disabled selected>Choose version...</option>
+            </select>
+          </div>
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#supported-features-and-peripherals">Supported Features and Peripherals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#datasheet">Datasheet</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../libraries.html#apis">APIs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adc.html">ADC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ble.html">BLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dac.html">DAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deepsleep.html">Deep Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="espnow.html">ESP-NOW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet.html">Ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpio.html">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c.html">I2C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2s.html">I2S</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insights.html">ESP Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ledc.html">LED Control (LEDC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html">Network API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulse_counter.html">Pulse Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker.html">ESP Rainmaker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reset Reason</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rmt.html">Remote Control (RMT)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdio.html">SDIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdmmc.html">SD MMC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial (UART)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sigmadelta.html">SigmaDelta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spi.html">SPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch.html">TOUCH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb.html">USB API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_cdc.html">USB CDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_msc.html">USB MSC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wifi.html">Wi-Fi API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#matter-apis">Matter APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#openthread-apis">OpenThread APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#zigbee-apis">Zigbee APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/guides.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_utils.html">Advanced Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_tools.html">Third Party Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guides/migration_guides.html">Migration Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_libraries_test.html">External Libraries Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Arduino ESP32</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../libraries.html">Libraries</a></li>
+      <li class="breadcrumb-item active">Reset Reason</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/espressif/arduino-esp32/blob/51e3c81/docs/en/api/reset_reason.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reset-reason">
+<h1>Reset Reason<a class="headerlink" href="#reset-reason" title="Permalink to this heading"></a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a work in progress project and this section is still missing. If you want to contribute, please see the <a class="reference external" href="../contributing.html">Contributions Guide</a>.</p>
+</div>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<p>To get started with Reset Reason, you can try:</p>
+<section id="id1">
+<h3>Reset Reason<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">*  Print last reset reason of ESP32</span>
+<span class="cm">*  =================================</span>
+<span class="cm">*</span>
+<span class="cm">*  Use either of the methods print_reset_reason</span>
+<span class="cm">*  or verbose_print_reset_reason to display the</span>
+<span class="cm">*  cause for the last reset of this device.</span>
+<span class="cm">*</span>
+<span class="cm">*  Public Domain License.</span>
+<span class="cm">*</span>
+<span class="cm">*  Author:</span>
+<span class="cm">*  Evandro Luis Copercini - 2017</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+
+<span class="cp">#if CONFIG_IDF_TARGET_ESP32  </span><span class="c1">// ESP32/PICO-D4</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32S2</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32s2/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32C2</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32c2/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32C3</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32c3/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32S3</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32s3/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32C6</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32c6/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32H2</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32h2/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32P4</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32p4/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32C5</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32c5/rom/rtc.h&quot;</span>
+<span class="cp">#elif CONFIG_IDF_TARGET_ESP32C61</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp32c61/rom/rtc.h&quot;</span>
+<span class="cp">#else</span>
+<span class="cp">#error Target CONFIG_IDF_TARGET is not supported</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define uS_TO_S_FACTOR 1000000 </span><span class="cm">/* Conversion factor for micro seconds to seconds */</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">print_reset_reason</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">reason</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">reason</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;POWERON_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">          </span><span class="cm">/**&lt;1,  Vbat power on reset*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;SW_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">               </span><span class="cm">/**&lt;3,  Software reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;OWDT_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">             </span><span class="cm">/**&lt;4,  Legacy watch dog reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;DEEPSLEEP_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">        </span><span class="cm">/**&lt;5,  Deep Sleep reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;SDIO_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">             </span><span class="cm">/**&lt;6,  Reset by SLC module, reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;TG0WDT_SYS_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">       </span><span class="cm">/**&lt;7,  Timer Group0 Watch dog reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;TG1WDT_SYS_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">       </span><span class="cm">/**&lt;8,  Timer Group1 Watch dog reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTCWDT_SYS_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">       </span><span class="cm">/**&lt;9,  RTC Watch dog Reset digital core*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;INTRUSION_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">        </span><span class="cm">/**&lt;10, Instrusion tested to reset CPU*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;TGWDT_CPU_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">        </span><span class="cm">/**&lt;11, Time Group reset CPU*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;SW_CPU_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">           </span><span class="cm">/**&lt;12, Software reset CPU*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">13</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTCWDT_CPU_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">       </span><span class="cm">/**&lt;13, RTC Watch dog Reset CPU*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">14</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;EXT_CPU_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">          </span><span class="cm">/**&lt;14, for APP CPU, reset by PRO CPU*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">15</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTCWDT_BROWN_OUT_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="cm">/**&lt;15, Reset when the vdd voltage is not stable*/</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTCWDT_RTC_RESET&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">       </span><span class="cm">/**&lt;16, RTC Watch dog reset digital core and rtc module*/</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;NO_MEAN&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">verbose_print_reset_reason</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">reason</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">reason</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Vbat power on reset&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Software reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Legacy watch dog reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Deep Sleep reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Reset by SLC module, reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Timer Group0 Watch dog reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Timer Group1 Watch dog reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTC Watch dog Reset digital core&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Instrusion tested to reset CPU&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Time Group reset CPU&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Software reset CPU&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">13</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTC Watch dog Reset CPU&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">14</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;for APP CPU, reset by PRO CPU&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">15</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Reset when the vdd voltage is not stable&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">16</span><span class="p">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;RTC Watch dog reset digital core and rtc module&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;NO_MEAN&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CPU0 reset reason:&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">print_reset_reason</span><span class="p">(</span><span class="n">rtc_get_reset_reason</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">  </span><span class="n">verbose_print_reset_reason</span><span class="p">(</span><span class="n">rtc_get_reset_reason</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CPU1 reset reason:&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">print_reset_reason</span><span class="p">(</span><span class="n">rtc_get_reset_reason</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">verbose_print_reset_reason</span><span class="p">(</span><span class="n">rtc_get_reset_reason</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+
+<span class="cp">#ifndef CONFIG_IDF_TARGET_ESP32H2</span>
+<span class="w">  </span><span class="c1">// Set ESP32 to go to deep sleep to see a variation</span>
+<span class="w">  </span><span class="c1">// in the reset reason. Device will sleep for 5 seconds.</span>
+<span class="cp">#if CONFIG_IDF_TARGET_ESP32C3 || CONFIG_IDF_TARGET_ESP32H2</span>
+<span class="w">  </span><span class="n">esp_sleep_pd_config</span><span class="p">(</span><span class="n">ESP_PD_DOMAIN_RC_FAST</span><span class="p">,</span><span class="w"> </span><span class="n">ESP_PD_OPTION_OFF</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="w">  </span><span class="n">esp_sleep_pd_config</span><span class="p">(</span><span class="n">ESP_PD_DOMAIN_RTC_PERIPH</span><span class="p">,</span><span class="w"> </span><span class="n">ESP_PD_OPTION_OFF</span><span class="p">);</span>
+<span class="cp">#endif</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;Going to sleep&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">esp_deep_sleep</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uS_TO_S_FACTOR</span><span class="p">);</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">  Example Serial Log:</span>
+<span class="cm">  ====================</span>
+
+<span class="cm">rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span>
+<span class="cm">configsip: 0, SPIWP:0x00</span>
+<span class="cm">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span>
+<span class="cm">mode:DIO, clock div:1</span>
+<span class="cm">load:0x3fff0008,len:8</span>
+<span class="cm">load:0x3fff0010,len:160</span>
+<span class="cm">load:0x40078000,len:10632</span>
+<span class="cm">load:0x40080000,len:252</span>
+<span class="cm">entry 0x40080034</span>
+<span class="cm">CPU0 reset reason:</span>
+<span class="cm">RTCWDT_RTC_RESET</span>
+<span class="cm">RTC Watch dog reset digital core and rtc module</span>
+<span class="cm">CPU1 reset reason:</span>
+<span class="cm">EXT_CPU_RESET</span>
+<span class="cm">for APP CPU, reset by PRO CPU</span>
+<span class="cm">Going to sleep</span>
+<span class="cm">ets Jun  8 2016 00:22:57</span>
+
+<span class="cm">rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span>
+<span class="cm">configsip: 0, SPIWP:0x00</span>
+<span class="cm">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span>
+<span class="cm">mode:DIO, clock div:1</span>
+<span class="cm">load:0x3fff0008,len:8</span>
+<span class="cm">load:0x3fff0010,len:160</span>
+<span class="cm">load:0x40078000,len:10632</span>
+<span class="cm">load:0x40080000,len:252</span>
+<span class="cm">entry 0x40080034</span>
+<span class="cm">CPU0 reset reason:</span>
+<span class="cm">DEEPSLEEP_RESET</span>
+<span class="cm">Deep Sleep reset digital core</span>
+<span class="cm">CPU1 reset reason:</span>
+<span class="cm">EXT_CPU_RESET</span>
+<span class="cm">for APP CPU, reset by PRO CPU</span>
+<span class="cm">Going to sleep</span>
+<span class="cm">ets Jun  8 2016 00:22:57</span>
+
+<span class="cm">rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span>
+<span class="cm">configsip: 0, SPIWP:0x00</span>
+<span class="cm">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span>
+<span class="cm">mode:DIO, clock div:1</span>
+<span class="cm">load:0x3fff0008,len:8</span>
+<span class="cm">load:0x3fff0010,len:160</span>
+<span class="cm">load:0x40078000,len:10632</span>
+<span class="cm">load:0x40080000,len:252</span>
+<span class="cm">entry 0x40080034</span>
+<span class="cm">CPU0 reset reason:</span>
+<span class="cm">DEEPSLEEP_RESET</span>
+<span class="cm">Deep Sleep reset digital core</span>
+<span class="cm">CPU1 reset reason:</span>
+<span class="cm">EXT_CPU_RESET</span>
+<span class="cm">for APP CPU, reset by PRO CPU</span>
+<span class="cm">Going to sleep</span>
+
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rainmaker.html" class="btn btn-neutral float-left" title="ESP Rainmaker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rmt.html" class="btn btn-neutral float-right" title="Remote Control (RMT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016 - 2026, Espressif Systems (Shanghai) Co., Ltd.</p>
+  </div>
+
+  <ul class="footer">
+        <li>
+	    
+            
+            Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/espressif/sphinx_idf_theme">theme</a>  based on <a href="https://github.com/readthedocs/sphinx_rtd_theme">Read the Docs Sphinx Theme</a>.
+         </li>
+
+  </ul> 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

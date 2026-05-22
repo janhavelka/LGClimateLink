@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F58JM78930"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-F58JM78930');
+        </script><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preferences -  -  &mdash; Arduino ESP32 latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=a60756f2" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=851bd809" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/chatbot_widget.css?v=10bc4cfd" />
+      <link rel="stylesheet" type="text/css" href="../_static/../_static/custom.css?v=14753fcc" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=becddca3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=ff8fa330"></script>
+        <script src="../_static/../_static/chatbot_widget_en.js?v=460e0bbd"></script>
+    <script src="../_static/js/theme.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        DOCUMENTATION_OPTIONS.PAGENAME = 'api/preferences';
+        DOCUMENTATION_OPTIONS.PROJECT_SLUG = 'arduino-esp32';
+        DOCUMENTATION_OPTIONS.LATEST_BRANCH_NAME = 'master';
+        DOCUMENTATION_OPTIONS.LANGUAGES = ["en"];
+        DOCUMENTATION_OPTIONS.RELEASE = 'latest';
+        DOCUMENTATION_OPTIONS.LANGUAGE_URL = 'en';
+
+    </script>
+
+    <script type="text/javascript" src=""></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pulse Counter" href="pulse_counter.html" />
+    <link rel="prev" title="Network API" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Arduino ESP32
+              <img src="../_static/espressif-logo.svg" class="logo" alt="Logo"/>
+          </a>
+
+          
+
+          <div class="selectors">
+            <select id="version-select" style="width: 150px;" hidden>
+              <option value="" disabled selected>Choose version...</option>
+            </select>
+          </div>
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libraries.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#supported-features-and-peripherals">Supported Features and Peripherals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#datasheet">Datasheet</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../libraries.html#apis">APIs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="adc.html">ADC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ble.html">BLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dac.html">DAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deepsleep.html">Deep Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="espnow.html">ESP-NOW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ethernet.html">Ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpio.html">GPIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2c.html">I2C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="i2s.html">I2S</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insights.html">ESP Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ledc.html">LED Control (LEDC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html">Network API</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Preferences</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#header-file">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-esp32-preferences-api">Arduino-esp32 Preferences API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pulse_counter.html">Pulse Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker.html">ESP Rainmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reset_reason.html">Reset Reason</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rmt.html">Remote Control (RMT)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdio.html">SDIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdmmc.html">SD MMC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serial.html">Serial (UART)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sigmadelta.html">SigmaDelta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spi.html">SPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="touch.html">TOUCH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb.html">USB API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_cdc.html">USB CDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usb_msc.html">USB MSC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wifi.html">Wi-Fi API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#matter-apis">Matter APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#openthread-apis">OpenThread APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries.html#zigbee-apis">Zigbee APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guides/guides.html">Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_utils.html">Advanced Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_tools.html">Third Party Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guides/migration_guides.html">Migration Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_libraries_test.html">External Libraries Testing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Arduino ESP32</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../libraries.html">Libraries</a></li>
+      <li class="breadcrumb-item active">Preferences</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/espressif/arduino-esp32/blob/51e3c81/docs/en/api/preferences.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="preferences">
+<h1>Preferences<a class="headerlink" href="#preferences" title="Permalink to this heading"></a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this heading"></a></h2>
+<p>The Preferences library is unique to arduino-esp32. It should be considered as the replacement for the Arduino EEPROM library.</p>
+<p>It uses a portion of the on-board non-volatile memory (NVS) of the ESP32 to store data. This data is retained across restarts and loss of power events to the system.</p>
+<p>Preferences works best for storing many small values, rather than a few large values. If large amounts of data are to be stored, consider using a file system library such as LitteFS.</p>
+<p>The Preferences library is usable by all ESP32 variants.</p>
+</section>
+<section id="header-file">
+<h2>Header File<a class="headerlink" href="#header-file" title="Permalink to this heading"></a></h2>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Preferences.h&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>Library methods are provided to:</dt><dd><ul class="simple">
+<li><p>create a namespace;</p></li>
+<li><p>open and close a namespace;</p></li>
+<li><p>store and retrieve data within a namespace for supported data types;</p></li>
+<li><p>determine if a key value has been initialized;</p></li>
+<li><p>delete a <code class="docutils literal notranslate"><span class="pre">key-value</span></code> pair;</p></li>
+<li><p>delete all <code class="docutils literal notranslate"><span class="pre">key-value</span></code> pairs in a namespace;</p></li>
+<li><p>determine data types stored against a key;</p></li>
+<li><p>determine the number of key entries in the namespace.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Preferences directly supports the following data types:</p>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text"><strong>Table 1 — Preferences Data Types</strong></span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Preferences Type</p></th>
+<th class="head"><p>Data Type</p></th>
+<th class="head"><p>Size (bytes)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bool</p></td>
+<td><p>bool</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Char</p></td>
+<td><p>int8_t</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>UChar</p></td>
+<td><p>uint8_t</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Short</p></td>
+<td><p>int16_t</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>UShort</p></td>
+<td><p>uint16_t</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Int</p></td>
+<td><p>int32_t</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>UInt</p></td>
+<td><p>uint32_t</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Long</p></td>
+<td><p>int32_t</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>ULong</p></td>
+<td><p>uint32_t</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Float</p></td>
+<td><p>float_t</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Long64</p></td>
+<td><p>int64_t</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>ULong64</p></td>
+<td><p>uint64_t</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>Double</p></td>
+<td><p>double_t</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>String</p></td>
+<td><p>const char*</p></td>
+<td rowspan="2"><p>variable</p></td>
+</tr>
+<tr class="row-even"><td><p>String</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bytes</p></td>
+<td><p>uint8_t</p></td>
+<td><p>variable</p></td>
+</tr>
+</tbody>
+</table>
+<p>String values can be stored and retrieved either as an Arduino String or as a null terminated <code class="docutils literal notranslate"><span class="pre">char</span></code> array (c-string).</p>
+<p>Bytes type is used for storing and retrieving an arbitrary number of bytes in a namespace.</p>
+</section>
+<section id="arduino-esp32-preferences-api">
+<h2>Arduino-esp32 Preferences API<a class="headerlink" href="#arduino-esp32-preferences-api" title="Permalink to this heading"></a></h2>
+<section id="begin">
+<h3><code class="docutils literal notranslate"><span class="pre">begin</span></code><a class="headerlink" href="#begin" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Open non-volatile storage with a given namespace name from an NVS partition.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">begin</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">readOnly</span><span class="o">=</span><span class="kr">false</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">partition_label</span><span class="o">=</span><span class="nb">NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code> (Required)</dt><dd><ul>
+<li><p>Namespace name. Maximum length is 15 characters.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (Optional)</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code> will open the namespace in read-write mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>  will open the namespace in read-only mode.</p></li>
+<li><p>if omitted, the namespace is opened in read-write mode.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">partition_label</span></code> (Optional)</dt><dd><ul>
+<li><p>name of the NVS partition in which to open the namespace.</p></li>
+<li><p>if omitted, the namespace is opened in the “<code class="docutils literal notranslate"><span class="pre">nvs</span></code>” partition.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the namespace was opened successfully; <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>If the namespace does not exist within the partition, it is first created.</p></li>
+<li><p>Attempting to write a key value to a namespace open in read-only mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="end">
+<h3><code class="docutils literal notranslate"><span class="pre">end</span></code><a class="headerlink" href="#end" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Close the currently opened namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">end</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>Nothing</p></li>
+</ul>
+</dd>
+<dt><strong>Note</strong></dt><dd><ul class="simple">
+<li><p>After closing a namespace, methods used to access it will fail.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="clear">
+<h3><code class="docutils literal notranslate"><span class="pre">clear</span></code><a class="headerlink" href="#clear" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Delete all keys and values from the currently opened namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if all keys and values were deleted; <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Note</strong></dt><dd><ul class="simple">
+<li><p>the namespace name still exists afterward.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="remove">
+<h3><code class="docutils literal notranslate"><span class="pre">remove</span></code><a class="headerlink" href="#remove" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Delete a key-value pair from the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>the name of the key to be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if key-value pair was deleted; <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Note</strong></dt><dd><ul class="simple">
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="iskey">
+<h3><code class="docutils literal notranslate"><span class="pre">isKey</span></code><a class="headerlink" href="#iskey" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Check if a key-value pair from the currently open namespace exists.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="n">isKey</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>the name of the key to be checked.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if key-value pair exists; <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Note</strong></dt><dd><ul class="simple">
+<li><p>Attempting to check a key without a namespace being open will return false.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putchar-putuchar">
+<h3><code class="docutils literal notranslate"><span class="pre">putChar,</span> <span class="pre">putUChar</span></code><a class="headerlink" href="#putchar-putuchar" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">putChar</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int8_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putUChar</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>must match the data type of the method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> (the number of bytes stored for these data types) if the call is successful; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putshort-putushort">
+<h3><code class="docutils literal notranslate"><span class="pre">putShort,</span> <span class="pre">putUShort</span></code><a class="headerlink" href="#putshort-putushort" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">putShort</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int16_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putUShort</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>must match the data type of the method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> (the number of bytes stored for these data types) if the call is successful; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putint-putuint">
+<h3><code class="docutils literal notranslate"><span class="pre">putInt,</span> <span class="pre">putUInt</span></code><a class="headerlink" href="#putint-putuint" title="Permalink to this heading"></a></h3>
+</section>
+<section id="putlong-putulong">
+<h3><code class="docutils literal notranslate"><span class="pre">putLong,</span> <span class="pre">putULong</span></code><a class="headerlink" href="#putlong-putulong" title="Permalink to this heading"></a></h3>
+</section>
+<section id="putfloat">
+<h3><code class="docutils literal notranslate"><span class="pre">putFloat</span></code><a class="headerlink" href="#putfloat" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">putInt</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putUInt</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putLong</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putULong</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putFloat</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">float_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>must match the data type of the method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> (the number of bytes stored for these data types) if the call is successful; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putlong64-putulong64">
+<h3><code class="docutils literal notranslate"><span class="pre">putLong64,</span> <span class="pre">putULong64</span></code><a class="headerlink" href="#putlong64-putulong64" title="Permalink to this heading"></a></h3>
+</section>
+<section id="putdouble">
+<h3><code class="docutils literal notranslate"><span class="pre">putDouble</span></code><a class="headerlink" href="#putdouble" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">putLong64</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int64_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putULong64</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint64_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">putDouble</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">double_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>must match the data type of the method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">8</span></code> (the number of bytes stored for these data types) if the call is successful; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putbool">
+<h3><code class="docutils literal notranslate"><span class="pre">putBool</span></code><a class="headerlink" href="#putbool" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">putBool</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>must match the data type of the method.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if successful; <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putstring">
+<h3><code class="docutils literal notranslate"><span class="pre">putString</span></code><a class="headerlink" href="#putstring" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a variable length value against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="nf">putString</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="nf">putString</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char*</span></code>, a null-terminated (c-string) character array.</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">String</span></code>, a valid Arduino String type.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: the number of bytes stored; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="putbytes">
+<h3><code class="docutils literal notranslate"><span class="pre">putBytes</span></code><a class="headerlink" href="#putbytes" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Store a variable number of bytes against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="nf">putBytes</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">void</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</dt><dd><ul>
+<li><p>if the key does not exist in the currently opened namespace it is first created.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>pointer to an array or buffer containing the bytes to be stored.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">len</span></code> (Required)</dt><dd><ul>
+<li><p>the number of bytes from <code class="docutils literal notranslate"><span class="pre">value</span></code> to be stored.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: the number of bytes stored; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to store a value without a namespace being open in read-write mode will fail.</p></li>
+<li><p>This method operates on the bytes used by the underlying data type, not the number of elements of a given data type. The data type of <code class="docutils literal notranslate"><span class="pre">value</span></code> is not retained by the Preferences library afterward.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="getchar-getuchar">
+<h3><code class="docutils literal notranslate"><span class="pre">getChar,</span> <span class="pre">getUChar</span></code><a class="headerlink" href="#getchar-getuchar" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int8_t</span><span class="w"> </span><span class="n">getChar</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int8_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">uint8_t</span><span class="w"> </span><span class="n">getUChar</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint8_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (Optional)</dt><dd><ul>
+<li><p>must match the data type of the method if provided.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>the value stored against <code class="docutils literal notranslate"><span class="pre">key</span></code> if the call is successful.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code>, if it is provided; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>Attempting to retrieve a key without a namespace being available will fail.</p></li>
+<li><p>Attempting to retrieve value from a non existent key will fail.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="getshort-getushort">
+<h3><code class="docutils literal notranslate"><span class="pre">getShort,</span> <span class="pre">getUShort</span></code><a class="headerlink" href="#getshort-getushort" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int16_t</span><span class="w"> </span><span class="n">getShort</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int16_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">uint16_t</span><span class="w"> </span><span class="n">getUShort</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint16_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getint-getuint">
+<h3><code class="docutils literal notranslate"><span class="pre">getInt,</span> <span class="pre">getUInt</span></code><a class="headerlink" href="#getint-getuint" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int32_t</span><span class="w"> </span><span class="n">getInt</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">uint32_t</span><span class="w"> </span><span class="n">getUInt</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getlong-getulong">
+<h3><code class="docutils literal notranslate"><span class="pre">getLong,</span> <span class="pre">getULong</span></code><a class="headerlink" href="#getlong-getulong" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int32_t</span><span class="w"> </span><span class="n">getLong</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int32_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">uint32_t</span><span class="w"> </span><span class="n">getULong</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint32_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getlong64-getulong64">
+<h3><code class="docutils literal notranslate"><span class="pre">getLong64,</span> <span class="pre">getULong64</span></code><a class="headerlink" href="#getlong64-getulong64" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int64_t</span><span class="w"> </span><span class="n">getLong64</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">int64_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">uint64_t</span><span class="w"> </span><span class="n">getULong64</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">uint64_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getfloat">
+<h3><code class="docutils literal notranslate"><span class="pre">getFloat</span></code><a class="headerlink" href="#getfloat" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">float_t</span><span class="w"> </span><span class="n">getFloat</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">float_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NAN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned and the value of <code class="docutils literal notranslate"><span class="pre">defaultValue</span></code>, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getdouble">
+<h3><code class="docutils literal notranslate"><span class="pre">getDouble</span></code><a class="headerlink" href="#getdouble" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">double_t</span><span class="w"> </span><span class="n">getDouble</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">double_t</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NAN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Except for the data type returned and the value of <code class="docutils literal notranslate"><span class="pre">defaultValue</span></code>, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getbool">
+<h3><code class="docutils literal notranslate"><span class="pre">getBool</span></code><a class="headerlink" href="#getbool" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve a value stored against a given key in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="nf">getBool</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">bool</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Except for the data type returned, behaves exactly like <code class="docutils literal notranslate"><span class="pre">getChar</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="getstring">
+<h3><code class="docutils literal notranslate"><span class="pre">getString</span></code><a class="headerlink" href="#getstring" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Copy a string of <code class="docutils literal notranslate"><span class="pre">char</span></code> stored against a given key in the currently open namespace to a buffer.</p>
+</div></blockquote>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="nf">getString</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">maxLen</span><span class="p">);</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required)</dt><dd><ul>
+<li><p>buffer to receive the null-terminated string</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">maxLen</span></code> (Required)</dt><dd><ul>
+<li><p>maximum number of bytes (including the null terminator) that can be written to <code class="docutils literal notranslate"><span class="pre">value</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: that many bytes (including the null terminator) are written to the buffer pointed to by <code class="docutils literal notranslate"><span class="pre">value</span></code>, and the method returns that number of bytes.</p></li>
+<li><p>if the method fails: nothing is written to the buffer and the method returns <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLen</span></code> must be greater than or equal to the number of bytes stored against the key (including the null terminator) or the call will fail. Use <code class="docutils literal notranslate"><span class="pre">getStringLength</span></code> to obtain the required size before calling.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id1">
+<h3><code class="docutils literal notranslate"><span class="pre">getString</span></code><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Retrieve an Arduino String value stored against a given key in the currently open namespace.</p>
+</div></blockquote>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="nf">getString</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">String</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">String</span><span class="p">());</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (Optional)</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>the value stored against <code class="docutils literal notranslate"><span class="pre">key</span></code> if the call if successful</p></li>
+<li><p>if the method fails: it returns <code class="docutils literal notranslate"><span class="pre">defaultValue</span></code>, if provided; <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> (an empty String) otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> must be of type <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="getstringlength">
+<h3><code class="docutils literal notranslate"><span class="pre">getStringLength</span></code><a class="headerlink" href="#getstringlength" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Get the number of bytes (including the null terminator) stored for a string value against a key in the currently open namespace. Use this to size a buffer before calling <code class="docutils literal notranslate"><span class="pre">getString(key,</span> <span class="pre">value,</span> <span class="pre">maxLen)</span></code>.</p>
+</div></blockquote>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="nf">getStringLength</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: the number of bytes in the value stored against <code class="docutils literal notranslate"><span class="pre">key</span></code> (including the null terminator); <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>This method will fail (return 0) if the key does not exist or is not of type String.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="getbytes">
+<h3><code class="docutils literal notranslate"><span class="pre">getBytes</span></code><a class="headerlink" href="#getbytes" title="Permalink to this heading"></a></h3>
+<p>Copy a series of bytes stored against a given key in the currently open namespace to a buffer.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="nf">getBytes</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kr">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">maxLen</span><span class="p">);</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">buf</span></code> (Required)</dt><dd><ul>
+<li><p>buffer to receive the bytes</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">maxLen</span></code> (Required)</dt><dd><ul>
+<li><p>maximum number of bytes that can be written to <code class="docutils literal notranslate"><span class="pre">buf</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: that many bytes are written to the buffer pointed to by <code class="docutils literal notranslate"><span class="pre">buf</span></code>, and the method returns that number of bytes.</p></li>
+<li><p>if the method fails: nothing is written to the buffer and the method returns <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLen</span></code> must be greater than or equal to the number of bytes stored against the key or the call will fail. Use <code class="docutils literal notranslate"><span class="pre">getBytesLength</span></code> to obtain the required size before calling.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="getbyteslength">
+<h3><code class="docutils literal notranslate"><span class="pre">getBytesLength</span></code><a class="headerlink" href="#getbyteslength" title="Permalink to this heading"></a></h3>
+<p>Get the number of bytes stored in the value against a key of type <code class="docutils literal notranslate"><span class="pre">Bytes</span></code> in the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">getBytesLength</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: the number of bytes in the value stored against <code class="docutils literal notranslate"><span class="pre">key</span></code>; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>This method will fail if <code class="docutils literal notranslate"><span class="pre">key</span></code> is not of type <code class="docutils literal notranslate"><span class="pre">Bytes</span></code>.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="gettype">
+<h3><code class="docutils literal notranslate"><span class="pre">getType</span></code><a class="headerlink" href="#gettype" title="Permalink to this heading"></a></h3>
+<p>Get the Preferences data type of a given key within the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">PreferenceType</span><span class="w"> </span><span class="n">getType</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (Required)</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>an <code class="docutils literal notranslate"><span class="pre">int</span></code> value as per Table 2 below.</p></li>
+<li><p>a value of <code class="docutils literal notranslate"><span class="pre">10</span></code> (PT_INVALID) if the call fails.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>The return values are enumerated in <code class="docutils literal notranslate"><span class="pre">Preferences.h</span></code>. Table 2 includes the enumerated values for information.</p></li>
+<li><p>A return value can map to more than one Prefs Type.</p></li>
+<li><p>The method will fail if: the namespace is not open; the key does not exist; the provided key exceeds 15 characters.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text"><strong>Table 2 — getType Return Values</strong></span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Return value</p></th>
+<th class="head"><p>Prefs Type</p></th>
+<th class="head"><p>Data Type</p></th>
+<th class="head"><p>Enumerated Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Char</p></td>
+<td><p>int8_t</p></td>
+<td><p>PT_I8</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>1</p></td>
+<td><p>UChar</p></td>
+<td><p>uint8_t</p></td>
+<td rowspan="2"><p>PT_U8</p></td>
+</tr>
+<tr class="row-even"><td><p>Bool</p></td>
+<td><p>bool</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Short</p></td>
+<td><p>int16_t</p></td>
+<td><p>PT_I16</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>UShort</p></td>
+<td><p>uint16_t</p></td>
+<td><p>PT_U16</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>4</p></td>
+<td><p>Int</p></td>
+<td rowspan="2"><p>int32_t</p></td>
+<td rowspan="2"><p>PT_I32</p></td>
+</tr>
+<tr class="row-even"><td><p>Long</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>5</p></td>
+<td><p>UInt</p></td>
+<td rowspan="2"><p>uint32_t</p></td>
+<td rowspan="2"><p>PT_U32</p></td>
+</tr>
+<tr class="row-even"><td><p>ULong</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Long64</p></td>
+<td><p>int64_t</p></td>
+<td><p>PT_I64</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>ULong64</p></td>
+<td><p>uint64_t</p></td>
+<td><p>PT_U64</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>8</p></td>
+<td rowspan="2"><p>String</p></td>
+<td><p>String</p></td>
+<td rowspan="2"><p>PT_STR</p></td>
+</tr>
+<tr class="row-even"><td><p>*char</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>9</p></td>
+<td><p>Double</p></td>
+<td><p>double_t</p></td>
+<td rowspan="3"><p>PT_BLOB</p></td>
+</tr>
+<tr class="row-even"><td><p>Float</p></td>
+<td><p>float_t</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bytes</p></td>
+<td><p>uint8_t</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>PT_INVALID</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="freeentries">
+<h3><code class="docutils literal notranslate"><span class="pre">freeEntries</span></code><a class="headerlink" href="#freeentries" title="Permalink to this heading"></a></h3>
+<p>Get the number of free entries available in the key table of the currently open namespace.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">freeEntries</span><span class="p">()</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="simple">
+<li><p>none</p></li>
+</ul>
+</dd>
+<dt><strong>Returns</strong></dt><dd><ul class="simple">
+<li><p>if successful: the number of free entries available in the key table of the currently open namespace; <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+</dd>
+<dt><strong>Notes</strong></dt><dd><ul class="simple">
+<li><p>keys storing values of type <code class="docutils literal notranslate"><span class="pre">Bool</span></code>, <code class="docutils literal notranslate"><span class="pre">Char</span></code>, <code class="docutils literal notranslate"><span class="pre">UChar</span></code>, <code class="docutils literal notranslate"><span class="pre">Short</span></code>, <code class="docutils literal notranslate"><span class="pre">UShort</span></code>, <code class="docutils literal notranslate"><span class="pre">Int</span></code>, <code class="docutils literal notranslate"><span class="pre">UInt</span></code>, <code class="docutils literal notranslate"><span class="pre">Long</span></code>, <code class="docutils literal notranslate"><span class="pre">ULong</span></code>, <code class="docutils literal notranslate"><span class="pre">Long64</span></code>, <code class="docutils literal notranslate"><span class="pre">ULong64</span></code> use one entry in the key table.</p></li>
+<li><p>keys storing values of type <code class="docutils literal notranslate"><span class="pre">Float</span></code> and <code class="docutils literal notranslate"><span class="pre">Double</span></code> use three entries in the key table.</p></li>
+<li><p>Arduino or c-string <code class="docutils literal notranslate"><span class="pre">String</span></code> types use a minimum of two key table entries with the number of entries increasing with the length of the string.</p></li>
+<li><p>keys storing values of type <code class="docutils literal notranslate"><span class="pre">Bytes</span></code> use a minimum of three key table entries with the number of entries increasing with the number of bytes stored.</p></li>
+<li><p>A message providing the reason for a failed call is sent to the arduino-esp32 <code class="docutils literal notranslate"><span class="pre">log_e</span></code> facility.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="network.html" class="btn btn-neutral float-left" title="Network API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pulse_counter.html" class="btn btn-neutral float-right" title="Pulse Counter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016 - 2026, Espressif Systems (Shanghai) Co., Ltd.</p>
+  </div>
+
+  <ul class="footer">
+        <li>
+	    
+            
+            Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/espressif/sphinx_idf_theme">theme</a>  based on <a href="https://github.com/readthedocs/sphinx_rtd_theme">Read the Docs Sphinx Theme</a>.
+         </li>
+
+  </ul> 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

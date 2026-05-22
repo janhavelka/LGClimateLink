@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plsbl.benoitblanchon.fr/js/pa-Yb9KuXpMiZLGmBcvIudEM.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/style.css?1779382094">
+  <link rel="stylesheet" href="/node_modules/lite-youtube-embed/src/lite-yt-embed.css">
+  <link rel="icon" href="/favicon.ico" />
+  
+  
+  <link type="application/atom+xml" rel="alternate" href="https://arduinojson.org/feed.xml" title="ArduinoJson" />
+  
+  <title>API Reference
+ | ArduinoJson 7</title>
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="API Reference" />
+<meta name="author" content="BenoitBlanchon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the reference documentation for ArduinoJson 7. It contains the description of all classes and functions." />
+<meta name="twitter:description" property="og:description" content="This is the reference documentation for ArduinoJson 7. It contains the description of all classes and functions." />
+<link rel="canonical" href="https://arduinojson.org/v7/api/" />
+<meta property="og:url" content="https://arduinojson.org/v7/api/" />
+<meta property="og:site_name" content="ArduinoJson" />
+<meta property="og:image" content="https://arduinojson.org/images/logo-1200.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://arduinojson.org/images/logo-1200.jpg" />
+<meta name="twitter:title" content="API Reference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"BenoitBlanchon"},"description":"This is the reference documentation for ArduinoJson 7. It contains the description of all classes and functions.","headline":"API Reference","image":"https://arduinojson.org/images/logo-1200.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arduinojson.org/images/logo-256.png"},"name":"BenoitBlanchon"},"url":"https://arduinojson.org/v7/api/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <meta name="keywords" content="ArduinoJson,api,reference">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Version 7",
+      "item": "https://arduinojson.org/v7/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "API Reference",
+      "item": "https://arduinojson.org/v7/api/"
+    }
+  ]
+}
+</script>
+</head>
+<body data-variant="0" data-timestamp="1779382094" data-environment="production" data-no-js>
+<script>delete document.body.dataset.noJs</script>
+<div class="d-flex flex-column" style="min-height: 100vh">
+  <header>
+  
+  
+  
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarArduinoJson" aria-controls="navbarArduinoJson" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="ArduinoJson" src="/images/navlogo.svg" width="1256" height="203" style="height: 1.5em; width: auto">
+      </a>
+
+      
+      
+      
+
+      <div class="collapse navbar-collapse" id="navbarArduinoJson">
+        <ul class="navbar-nav me-auto">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              v7
+            </a>
+            
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              
+              <a class="dropdown-item" href="/v5/api/">v5</a>
+              
+              
+              
+              <a class="dropdown-item" href="/v6/api/">v6</a>
+              
+              
+              
+              <span class="dropdown-item disabled">v7</span>
+              
+              
+            </div>
+          </li>
+          <li id="nav-doc" class="nav-item active">
+            <a class="nav-link link-primary" href="/v7/">Documentation</a>
+          </li><li id="nav-assistant" class="nav-item">
+            <a class="nav-link" href="/v7/assistant/" aria-current="page">Assistant</a>
+          </li><li id="nav-troubleshooter" class="nav-item">
+            <a class="nav-link" href="/troubleshooter" aria-current="page">Troubleshooter</a>
+          </li><li id="nav-book" class="nav-item">
+            <a class="nav-link" href="/book/" aria-current="page">Book</a>
+          </li><li id="nav-news" class="nav-item">
+            <a class="nav-link" href="/news/" aria-current="page">News</a>
+          </li></ul>
+        <form class="me-sm-2" action="/v7/search/">
+          <input class="form-control" name="q" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main class="flex-grow-1">
+  <header class="page-header">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+  
+    <a href="/v7/" class="link-light">Version 7</a>
+    </nav>
+
+    <h1><p>API Reference</p>
+</h1>
+    
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-3 d-none d-lg-block">
+     
+     <ul class="nav nav-pills flex-column mb-auto sticky-top">
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/" class="nav-link text-truncate ">Documentation</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/tutorial/deserialization/" class="nav-link text-truncate ">Deserialization tutorial</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/tutorial/serialization/" class="nav-link text-truncate ">Serialization tutorial</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/example/" class="nav-link text-truncate ">Examples</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/api/" class="nav-link text-truncate active">API Reference</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/config/" class="nav-link text-truncate ">Compile time configuration</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/how-to/" class="nav-link text-truncate ">How To's</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/faq/" class="nav-link text-truncate ">FAQ</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/revisions/" class="nav-link text-truncate ">Release notes</a>
+  </li>
+  
+  <li class="nav-item mw-100">
+    
+    <a href="/v7/known-issues/" class="nav-link text-truncate ">Known issues</a>
+  </li>
+  
+</ul>
+
+    </div>
+    <div class="col-9 article">
+      <p>This is the detailed documentation of every class and function of the ArduinoJson library.
+Some parts have been simplified to be easier to understand, so if you look at the source code, you might see some differences.</p>
+
+<h2 id="main-classes">Main classes</h2>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/jsonarray/"><code class="language-plaintext highlighter-rouge">JsonArray</code></a></dt>
+  <dd>A reference to a JSON array in a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a></dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M149.333 216v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-80c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zM125.333 32H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zm80 448H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm-24-424v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24zm24 264H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/jsonobject/"><code class="language-plaintext highlighter-rouge">JsonObject</code></a></dt>
+  <dd>A reference to a JSON object in a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a></dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M478.21 334.093L336 256l142.21-78.093c11.795-6.477 15.961-21.384 9.232-33.037l-19.48-33.741c-6.728-11.653-21.72-15.499-33.227-8.523L296 186.718l3.475-162.204C299.763 11.061 288.937 0 275.48 0h-38.96c-13.456 0-24.283 11.061-23.994 24.514L216 186.718 77.265 102.607c-11.506-6.976-26.499-3.13-33.227 8.523l-19.48 33.741c-6.728 11.653-2.562 26.56 9.233 33.037L176 256 33.79 334.093c-11.795 6.477-15.961 21.384-9.232 33.037l19.48 33.741c6.728 11.653 21.721 15.499 33.227 8.523L216 325.282l-3.475 162.204C212.237 500.939 223.064 512 236.52 512h38.961c13.456 0 24.283-11.061 23.995-24.514L296 325.282l138.735 84.111c11.506 6.976 26.499 3.13 33.227-8.523l19.48-33.741c6.728-11.653 2.563-26.559-9.232-33.036z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/jsonvariant/"><code class="language-plaintext highlighter-rouge">JsonVariant</code></a></dt>
+  <dd>A reference to a JSON value (array, object, integer…) in a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a></dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 448 512" class="icon"><path d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a></dt>
+  <dd>Owns the memory for <a href="/v7/api/jsonarray/"><code class="language-plaintext highlighter-rouge">JsonArray</code></a>, <a href="/v7/api/jsonobject/"><code class="language-plaintext highlighter-rouge">JsonObject</code></a> and <a href="/v7/api/jsonvariant/"><code class="language-plaintext highlighter-rouge">JsonVariant</code></a></dd>
+</dl>
+
+<h2 id="json-serialization--deserialization">JSON serialization / deserialization</h2>
+
+<div class="api-index-icon"><svg viewBox="0 0 640 512" class="icon"><path d="M425.7 256c-16.9 0-32.8-9-41.4-23.4L320 126l-64.2 106.6c-8.7 14.5-24.6 23.5-41.5 23.5-4.5 0-9-.6-13.3-1.9L64 215v178c0 14.7 10 27.5 24.2 31l216.2 54.1c10.2 2.5 20.9 2.5 31 0L551.8 424c14.2-3.6 24.2-16.4 24.2-31V215l-137 39.1c-4.3 1.3-8.8 1.9-13.3 1.9zm212.6-112.2L586.8 41c-3.1-6.2-9.8-9.8-16.7-8.9L320 64l91.7 152.1c3.8 6.3 11.4 9.3 18.5 7.3l197.9-56.5c9.9-2.9 14.7-13.9 10.2-23.1zM53.2 41L1.7 143.8c-4.6 9.2.3 20.2 10.1 23l197.9 56.5c7.1 2 14.7-1 18.5-7.3L320 64 69.8 32.1c-6.9-.8-13.5 2.7-16.6 8.9z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/json/deserializejson/"><code class="language-plaintext highlighter-rouge">deserializeJson()</code></a></dt>
+  <dd>Deserialize a JSON document into a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a>.</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H272v192h238.7c-.4-2.5-.4-5-1.2-7.4zM240 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-.8 2.4-.8 4.9-1.2 7.4H240V0zM0 224v240c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V224H0z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/json/serializejson/"><code class="language-plaintext highlighter-rouge">serializeJson()</code></a></dt>
+  <dd>Serializes a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a> into a minified JSON document</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 448 512" class="icon"><path d="M447.6 158.8L391.3 53.9C386.9 40.8 374.7 32 360.9 32H240v128h206.7c.4-.5.5-.7.9-1.2zM0 192v256c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V192H0zm305.1 149.2l-72.6 71.4c-4.7 4.6-12.3 4.6-17 0l-72.6-71.4c-21.1-20.7-19.8-55.1 3.7-74.2 20.5-16.7 51.1-13.7 70 4.8l7.4 7.3 7.4-7.3c18.8-18.5 49.4-21.5 70-4.8 23.5 19.1 24.7 53.4 3.7 74.2zM208 160V32H87.1c-13.8 0-26 8.8-30.4 21.9L.4 158.8c.4.5.5.7.9 1.2H208z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/json/serializejsonpretty/"><code class="language-plaintext highlighter-rouge">serializeJsonPretty()</code></a></dt>
+  <dd>Serializes a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a> into a prettyfied JSON document</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 640 512" class="icon"><path d="M635.7 167.2L556.1 31.7c-8.8-15-28.3-20.1-43.5-11.5l-69 39.1L503.3 161c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L416 75l-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L333.2 122 278 153.3 337.8 255c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-59.7-101.7-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-27.9-47.5-55.2 31.3 59.7 101.7c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L84.9 262.9l-69 39.1C.7 310.7-4.6 329.8 4.2 344.8l79.6 135.6c8.8 15 28.3 20.1 43.5 11.5L624.1 210c15.2-8.6 20.4-27.8 11.6-42.8z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/json/measurejson/"><code class="language-plaintext highlighter-rouge">measureJson()</code></a></dt>
+  <dd>Computes the size of the document that <a href="/v7/api/json/serializejson/"><code class="language-plaintext highlighter-rouge">serializeJson()</code></a> produces</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 640 512" class="icon"><path d="M635.7 167.2L556.1 31.7c-8.8-15-28.3-20.1-43.5-11.5l-69 39.1L503.3 161c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L416 75l-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L333.2 122 278 153.3 337.8 255c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-59.7-101.7-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-27.9-47.5-55.2 31.3 59.7 101.7c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L84.9 262.9l-69 39.1C.7 310.7-4.6 329.8 4.2 344.8l79.6 135.6c8.8 15 28.3 20.1 43.5 11.5L624.1 210c15.2-8.6 20.4-27.8 11.6-42.8z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/json/measurejsonpretty/"><code class="language-plaintext highlighter-rouge">measureJsonPretty()</code></a></dt>
+  <dd>Computes the size of the document that <a href="/v7/api/json/serializejsonpretty/"><code class="language-plaintext highlighter-rouge">serializeJsonPretty()</code></a> produces</dd>
+</dl>
+
+<h2 id="messagepack-serialization--deserialization">MessagePack serialization / deserialization</h2>
+
+<div class="api-index-icon"><svg viewBox="0 0 640 512" class="icon"><path d="M425.7 256c-16.9 0-32.8-9-41.4-23.4L320 126l-64.2 106.6c-8.7 14.5-24.6 23.5-41.5 23.5-4.5 0-9-.6-13.3-1.9L64 215v178c0 14.7 10 27.5 24.2 31l216.2 54.1c10.2 2.5 20.9 2.5 31 0L551.8 424c14.2-3.6 24.2-16.4 24.2-31V215l-137 39.1c-4.3 1.3-8.8 1.9-13.3 1.9zm212.6-112.2L586.8 41c-3.1-6.2-9.8-9.8-16.7-8.9L320 64l91.7 152.1c3.8 6.3 11.4 9.3 18.5 7.3l197.9-56.5c9.9-2.9 14.7-13.9 10.2-23.1zM53.2 41L1.7 143.8c-4.6 9.2.3 20.2 10.1 23l197.9 56.5c7.1 2 14.7-1 18.5-7.3L320 64 69.8 32.1c-6.9-.8-13.5 2.7-16.6 8.9z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/msgpack/deserializemsgpack/"><code class="language-plaintext highlighter-rouge">deserializeMsgPack()</code></a></dt>
+  <dd>Deserialize a MessagePack document into a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a></dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H272v192h238.7c-.4-2.5-.4-5-1.2-7.4zM240 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-.8 2.4-.8 4.9-1.2 7.4H240V0zM0 224v240c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V224H0z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/msgpack/serializemsgpack/"><code class="language-plaintext highlighter-rouge">serializeMsgPack()</code></a></dt>
+  <dd>Serializes a <a href="/v7/api/jsondocument/"><code class="language-plaintext highlighter-rouge">JsonDocument</code></a> into a MessagePack document</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 640 512" class="icon"><path d="M635.7 167.2L556.1 31.7c-8.8-15-28.3-20.1-43.5-11.5l-69 39.1L503.3 161c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L416 75l-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L333.2 122 278 153.3 337.8 255c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-59.7-101.7-55.2 31.3 27.9 47.4c2.2 3.8.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9l-27.9-47.5-55.2 31.3 59.7 101.7c2.2 3.7.9 8.5-2.9 10.7l-13.8 7.8c-3.8 2.2-8.7.9-10.9-2.9L84.9 262.9l-69 39.1C.7 310.7-4.6 329.8 4.2 344.8l79.6 135.6c8.8 15 28.3 20.1 43.5 11.5L624.1 210c15.2-8.6 20.4-27.8 11.6-42.8z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/msgpack/measuremsgpack/"><code class="language-plaintext highlighter-rouge">measureMsgPack()</code></a></dt>
+  <dd>Computes the size of the document that <a href="/v7/api/msgpack/serializemsgpack/"><code class="language-plaintext highlighter-rouge">serializeMsgPack()</code></a> produces</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none" class="icon">
+    <path d="M2 6C2 5.05719 2 4.58579 2.29289 4.29289C2.58579 4 3.05719 4 4 4C4.94281 4 5.41421 4 5.70711 4.29289C6 4.58579 6 5.05719 6 6V8C6 8.94281 6 9.41421 5.70711 9.70711C5.41421 10 4.94281 10 4 10C3.05719 10 2.58579 10 2.29289 9.70711C2 9.41421 2 8.94281 2 8V6Z" stroke="currentColor" stroke-width="1.5" />
+    <path d="M6.5 16C6.5 15.0572 6.5 14.5858 6.79289 14.2929C7.08579 14 7.55719 14 8.5 14C9.44281 14 9.91421 14 10.2071 14.2929C10.5 14.5858 10.5 15.0572 10.5 16V18C10.5 18.9428 10.5 19.4142 10.2071 19.7071C9.91421 20 9.44281 20 8.5 20C7.55719 20 7.08579 20 6.79289 19.7071C6.5 19.4142 6.5 18.9428 6.5 18V16Z" stroke="currentColor" stroke-width="1.5" />
+    <path d="M13.5 6C13.5 5.05719 13.5 4.58579 13.7929 4.29289C14.0858 4 14.5572 4 15.5 4C16.4428 4 16.9142 4 17.2071 4.29289C17.5 4.58579 17.5 5.05719 17.5 6V8C17.5 8.94281 17.5 9.41421 17.2071 9.70711C16.9142 10 16.4428 10 15.5 10C14.5572 10 14.0858 10 13.7929 9.70711C13.5 9.41421 13.5 8.94281 13.5 8V6Z" stroke="currentColor" stroke-width="1.5" />
+    <path d="M13.5 16C13.5 15.0572 13.5 14.5858 13.7929 14.2929C14.0858 14 14.5572 14 15.5 14C16.4428 14 16.9142 14 17.2071 14.2929C17.5 14.5858 17.5 15.0572 17.5 16V18C17.5 18.9428 17.5 19.4142 17.2071 19.7071C16.9142 20 16.4428 20 15.5 20C14.5572 20 14.0858 20 13.7929 19.7071C13.5 19.4142 13.5 18.9428 13.5 18V16Z" stroke="currentColor" stroke-width="1.5" />
+    <path d="M9 5L10.5 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M2 15L3.5 14V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M20.5 5L22 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M20.5 15L22 14V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg></div>
+<dl>
+  <dt><a href="/v7/api/msgpack/msgpackbinary/"><code class="language-plaintext highlighter-rouge">MsgPackBinary</code></a> 🆕</dt>
+  <dd>Allows you to read or write MessagePack binary data</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 576 512" class="icon"><path d="M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/msgpack/msgpackextension/"><code class="language-plaintext highlighter-rouge">MsgPackExtension</code></a> 🆕</dt>
+  <dd>Allows you to read or write MessagePack extension data</dd>
+</dl>
+
+<h2 id="misc">Misc</h2>
+
+<div class="api-index-icon"><svg viewBox="0 0 384 512" class="icon"><path d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/misc/version/"><code class="language-plaintext highlighter-rouge">ARDUINOJSON_VERSION</code></a></dt>
+  <dd>Tells which version of ArduinoJson is installed</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 448 512" class="icon"><path d="M144 32H32A32 32 0 0 0 0 64v384a32 32 0 0 0 32 32h112a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H64V96h80a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm272 0H304a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h80v320h-80a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h112a32 32 0 0 0 32-32V64a32 32 0 0 0-32-32z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/misc/copyarray/"><code class="language-plaintext highlighter-rouge">copyArray()</code></a></dt>
+  <dd>Copies values between a <a href="/v7/api/jsonarray/"><code class="language-plaintext highlighter-rouge">JsonArray</code></a> and a regular array.</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 512 512" class="icon"><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/jsonstring/"><code class="language-plaintext highlighter-rouge">JsonString</code></a></dt>
+  <dd>The string type returned by some functions.</dd>
+</dl>
+
+<div class="api-index-icon"><svg viewBox="0 0 576 512" class="icon"><path d="M208 32h-48a96 96 0 0 0-96 96v37.48a32.06 32.06 0 0 1-9.38 22.65L9.37 233.37a32 32 0 0 0 0 45.26l45.25 45.25A32 32 0 0 1 64 346.51V384a96 96 0 0 0 96 96h48a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-48a32 32 0 0 1-32-32v-37.48a96 96 0 0 0-28.13-67.89L77.25 256l22.63-22.63A96 96 0 0 0 128 165.48V128a32 32 0 0 1 32-32h48a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zm358.63 201.37l-45.25-45.24a32.06 32.06 0 0 1-9.38-22.65V128a96 96 0 0 0-96-96h-48a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h48a32 32 0 0 1 32 32v37.47a96 96 0 0 0 28.13 67.91L498.75 256l-22.62 22.63A96 96 0 0 0 448 346.52V384a32 32 0 0 1-32 32h-48a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h48a96 96 0 0 0 96-96v-37.49a32 32 0 0 1 9.38-22.63l45.25-45.25a32 32 0 0 0 0-45.26z" fill="currentColor" /></svg></div>
+<dl>
+  <dt><a href="/v7/api/misc/serialized/"><code class="language-plaintext highlighter-rouge">serialized()</code></a></dt>
+  <dd>Allows inserting preformatted pieces of JSON or MsgPack in a document</dd>
+</dl>
+
+      <nav aria-label="breadcrumb" class="mt-4 bg-light px-3 py-2 rounded">
+  <ol class="breadcrumb m-0">
+    
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/v7/">Version 7</a></li><li class="breadcrumb-item active">
+      <span>API Reference
+      </span>
+    </li>
+  </ol>
+</nav>
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="site-footer hidden-sm-down text-light bg-dark py-3">
+  <div class="container">
+   	<div class="row">
+   		<div class="col-md-6 col-lg-4 my-2">
+        <h5>ArduinoJson</h5>
+        <div>A JSON library for embedded C++.</div>
+        <div>Simple, efficient, and versatile.</div>
+        <div class="text-muted">Copyright 2014-2026 &copy; Benoît Blanchon</div>
+      </div>
+      <div class="col-md-6 col-lg-4 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/sponsors/bblanchon"><svg viewBox="0 0 512 512" class="icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" fill="currentColor"/></svg> Sponsors</a>
+        </nav>
+        <div class="d-flex gap-2">
+          
+          <a href="https://github.com/1technophile" target="_blank"><img class="avatar avatar-small" alt="1technophile" width="40" height="40" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/1technophile?v=3&s=40" srcset="https://avatars1.githubusercontent.com/1technophile?v=3&s=40 1x, https://avatars1.githubusercontent.com/1technophile?v=3&s=80 2x, https://avatars1.githubusercontent.com/1technophile?v=3&s=120 3x, https://avatars1.githubusercontent.com/1technophile?v=3&s=160 4x" /></a>
+          
+          <a href="https://github.com/LArkema" target="_blank"><img class="avatar avatar-small" alt="LArkema" width="40" height="40" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/LArkema?v=3&s=40" srcset="https://avatars1.githubusercontent.com/LArkema?v=3&s=40 1x, https://avatars1.githubusercontent.com/LArkema?v=3&s=80 2x, https://avatars1.githubusercontent.com/LArkema?v=3&s=120 3x, https://avatars1.githubusercontent.com/LArkema?v=3&s=160 4x" /></a>
+          
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/bblanchon/ArduinoJson"><svg viewBox="0 0 496 512" class="icon"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/></svg> GitHub</a>
+          <a class="nav-link" href="/contact/"><svg viewBox="0 0 512 512" class="icon"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" fill="currentColor"/></svg> Contact</a>
+        </nav>
+      </div>
+      <div class="col-md-6 col-lg-2 my-2">
+        <nav class="nav">
+          <a class="nav-link" href="/about/">About</a>
+          <a class="nav-link" href="/privacy/">Privacy</a>
+        </nav>
+      </div>
+   	</div>
+  </div>
+</footer>
+<a href="https://showyourstripes.info/l" target="_blank" data-bs-title="Global warming stripes by Professor Ed Hawkins (University of Reading)" data-bs-toggle="tooltip">
+  <img src="https://showyourstripes.info/stripes/GLOBE---1850-2024-MO.png" alt="Global warming stripes by Professor Ed Hawkins (University of Reading)" class="warming-stripes">
+</a>
+
+</div>
+<script src="/assets/bundle.js?1779382094"></script>
+
+
+</body>
+</html>

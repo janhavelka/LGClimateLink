@@ -1,0 +1,26 @@
+.pio/
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+
+# PlatformIO and embedded build outputs
+*.bin
+*.elf
+*.map
+*.hex
+*.uf2
+*.lst
+
+# Local logs and generated reports
+*.log
+coverage/
+build/
+dist/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+*.swp
