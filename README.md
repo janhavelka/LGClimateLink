@@ -336,6 +336,7 @@ The status service maps health and connectivity into visible states:
 | `docs/DIGIPOT_NTC_EMULATION.md` | Virtual thermistor math, calibration, and failure behavior. |
 | `HARDENING_REPORT.md` | Audit passes, fixes, verification, and remaining risks. |
 | `docs/reference/README.md` | Vendored reference documentation inventory and provenance. |
+| `docs/audit/LGClimateLink_Pre-Audit_Questionnaire_Answers.md` | Filled pre-audit evidence questionnaire. |
 | `Doxyfile` | Doxygen configuration for API documentation. |
 
 Generate API docs with:

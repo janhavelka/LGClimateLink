@@ -68,6 +68,7 @@ Initial bench-bring-up release.
 - Added `HARDENING_REPORT.md` with audit passes, fixes, verification results, and remaining hardware risks.
 - Added `docs/reference/` with upstream protocol/library docs, source licenses, hardware datasheets, Home Assistant MQTT references, and platform API references.
 - Expanded Doxygen configuration with a maintainer main page and public-header API comments.
+- Added a filled pre-audit evidence questionnaire under `docs/audit/`.
 
 ### Verification
 
