@@ -1,5 +1,7 @@
 # Agent Notes
 
+Always synchronize Git with the intended upstream branch before starting work by fetching and fast-forwarding safely, preserving existing local changes and reporting any divergence, conflict, or synchronization failure.
+
 This repository was generated as a greenfield firmware implementation.
 
 Reference passes performed:
