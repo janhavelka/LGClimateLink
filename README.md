@@ -369,3 +369,8 @@ These items are intentionally tracked as hardware verification work, not hidden 
 - Do not add blocking waits to `loop()` services.
 - Do not let logging or CLI output participate in LG bus timing.
 - Do not update thermistor defaults without recording the measurement source.
+
+## License
+
+MIT. See [LICENSE](LICENSE). Material under `docs/reference/` keeps the
+licenses of its original owners.
