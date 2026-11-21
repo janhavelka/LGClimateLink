@@ -53,3 +53,9 @@ Implementation constraints:
 - Raw LG send and raw digipot writes must remain guarded by arming commands.
 - Do not persist telemetry or high-rate counters to flash.
 - Update `HARDENING_REPORT.md` whenever safety behavior changes.
+
+## Commit and pull request attribution
+
+Credit human contributors for their work. Omit AI co-author trailers, AI-generated
+signatures or sign-offs, generated-by footers, session links, and other AI
+attribution from commit messages and pull request titles and descriptions.
